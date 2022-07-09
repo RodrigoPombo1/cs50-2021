@@ -1,6 +1,12 @@
 #include <cs50.h>
 #include <stdio.h>
 
+bool check_VISA(int card_number);
+bool check_AMEX(int card_number);
+bool check_MASTERCARD(int card_number);
+
+
+
 int main(void)
 {
     long credit_card_number;
@@ -10,13 +16,10 @@ int main(void)
     }
     while (credit_card_number < 999999999999);
 
-    if (not_invalid):
-        if (first_two_numbers == ):
-    else:
         printf("INVALID\n")
 }
 
-int check_VISA(int card_number)
+bool check_VISA(int card_number)
 {
 
     if ()
@@ -29,7 +32,7 @@ int check_VISA(int card_number)
     }
 }
 
-int check_MASTERCARD(int card_number)
+bool check_MASTERCARD(int card_number)
 {
 
     if ()
@@ -42,7 +45,7 @@ int check_MASTERCARD(int card_number)
     }
 }
 
-int check_VISA(int card_number)
+bool check_AMEX(int card_number)
 {
 
     if ()
