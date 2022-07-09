@@ -27,9 +27,7 @@ int main(void)
         sum2 += digit;
         aux = aux / 10;
         digit = aux % 10;
-        aux3 = 0;
-        aux3 += (digit % 10) * 2;
-        aux3 = (digit % 10)*2;
+        aux3 = digit * 2;
         sum += aux3 % 10;
         if (aux3 >= 10)
         {
