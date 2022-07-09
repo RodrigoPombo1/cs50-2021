@@ -22,16 +22,17 @@ int main(void)
     int digit;
     while (aux > 100)
     {
-        digit = aux%10
-        sum2 += digit
-        aux = aux/10
-        int digit = aux %10
-        sum += digit * 2
+        digit = aux % 10;
+        sum2 += digit;
+        aux = aux / 10;
+        int digit = aux % 10;
+        sum += digit * 2;
+        aux = aux / 10;
     }
-    aux = sum +sum2
+    aux = sum + sum2;
     while ((aux) > 10)
     {
-        aux = aux / 10
+        aux = aux / 10;
     }
     if (aux % 10 == 0)
     {
