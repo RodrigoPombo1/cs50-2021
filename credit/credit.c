@@ -15,6 +15,7 @@ int main(void)
         credit_card_number = get_long("Number: ");
     }
     while (credit_card_number < 0);
+    
     if
     {
         if (check_VISA(credit_card_number))
@@ -43,7 +44,7 @@ int main(void)
 bool check_VISA(long card_number)
 {
 
-    if ()
+    if (card_number / 100000000000000 == 34 || card_number / 100000000000000 == 37)
     {
         return true;
     }
