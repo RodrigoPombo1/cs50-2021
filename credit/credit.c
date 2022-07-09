@@ -28,10 +28,10 @@ int main(void)
         digit = aux % 10;
         do
         sum += (digit % 10) * 2;
-        while (digit < 10);
+        while (digit > 10);
         aux = aux / 10;
     }
-    int aux2 = sum + sum2; //é para adicionar os digitos da soma e não os numero, os digitos dos numeros, mas nao os numeros
+    int aux2 = sum + sum2;
     printf("%i",sum);
     printf("%i",sum2);
     printf("%i",aux2);
