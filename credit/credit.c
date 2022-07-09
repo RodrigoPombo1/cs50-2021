@@ -26,7 +26,9 @@ int main(void)
         sum2 += digit;
         aux = aux / 10;
         digit = aux % 10;
-        sum += digit * 2;
+        do
+        sum += (digit % 10) * 2;
+        while (digit < 10);
         aux = aux / 10;
     }
     int aux2 = sum + sum2; //é para adicionar os digitos da soma e não os numero, os digitos dos numeros, mas nao os numeros
