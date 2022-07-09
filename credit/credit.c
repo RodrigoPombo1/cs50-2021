@@ -26,9 +26,11 @@ int main(void)
         //chooses last digit (always never the second to last)
         digit = aux % 10;
         printf("%i", digit);                                //
-        
+        //sum2 of the digits that weren't multiplied by 2
         sum2 += digit;
+        //no longer need the digit from the credit card number, so remove it
         aux = aux / 10;
+        //get only the digit because it's the one that needs to be multiplie
         digit = aux % 10;
         printf("%i", digit);                                //
         aux3 = digit * 2;
