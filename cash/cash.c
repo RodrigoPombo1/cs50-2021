@@ -38,29 +38,29 @@ int main(void)
 int get_cents(void)
 {
     // TODO
-    return 0;
+    return 56;
 }
 
 int calculate_quarters(int cents)
 {
     // TODO
-    return 0;
+    return 2;
 }
 
 int calculate_dimes(int cents)
 {
     // TODO
-    return 0;
+    return 4;
 }
 
 int calculate_nickels(int cents)
 {
     // TODO
-    return 0;
+    return 5;
 }
 
 int calculate_pennies(int cents)
 {
     // TODO
-    return 0;
+    return 6;
 }
