@@ -33,11 +33,14 @@ int main(void)
         //get only the digit because it's the one that needs to be multiplied by 2
         digit = aux % 10;
         printf("%i", digit);                                //
+        //multiplies digit by 2
         aux3 = digit * 2;
+        //gets the last digit of the sum
         sum += aux3 % 10;
+        //if by multiplying by 2 the digit became a number with 2 digits, than we need to get the second digit
         if (aux3 >= 10)
         {
-            aux3 = aux3 / 10;
+            aux3 = aux3 / 10; //
             sum += aux3;
         }
         aux = aux / 10;
