@@ -8,5 +8,6 @@ int main(void)
     {
         credit_card_number = get_long("Number: ");
     }
-    while (credit_card_number)
+    while (credit_card_number < 0);
+    if 
 }
