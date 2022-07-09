@@ -16,7 +16,19 @@ int main(void)
     }
     while (credit_card_number < 0);
     // while loop to get the number of digits
-    do
+    long aux = credit_card_number;
+    int sum = 0;
+    int sum2 = 0;
+    int digit;
+    while (aux > 100)
+    {
+        digit = aux%10
+        sum2 += digit
+        aux = aux/10
+        int digit = aux %10
+        sum += digit * 2
+    }
+    if
     {
         if (check_VISA(credit_card_number))
         {
