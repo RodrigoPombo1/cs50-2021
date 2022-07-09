@@ -30,6 +30,7 @@ int main(void)
         aux = aux / 10;
     }
     aux = sum + sum2;
+    printf(aux);
     while ((aux) > 10)
     {
         aux = aux / 10;
@@ -50,12 +51,12 @@ int main(void)
         }
         else
         {
-            printf("INVALID\n");
+            printf("INVALID2\n");
         }
     }
     else
     {
-        printf("INVALID\n");
+        printf("INVALID1\n");
     }
 }
 
