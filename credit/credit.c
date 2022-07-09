@@ -27,8 +27,9 @@ int main(void)
         aux = aux / 10;
         digit = aux % 10;
         do
-        sum += (digit % 10) * 2;
-        while (digit > 10);
+        {
+            sum += (digit % 10) * 2;
+        }while (digit > 10);
         aux = aux / 10;
     }
     int aux2 = sum + sum2;
