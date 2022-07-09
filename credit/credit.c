@@ -29,7 +29,7 @@ int main(void)
         sum += digit * 2;
         aux = aux / 10;
     }
-    aux = sum + sum2;
+    int aux = sum + sum2;
     printf(aux);
     while ((aux) > 10)
     {
