@@ -28,7 +28,12 @@ int main(void)
         int digit = aux %10
         sum += digit * 2
     }
-    if
+    aux = sum +sum2
+    while ((aux) > 10)
+    {
+        aux = aux / 10
+    }
+    if (aux % 10 == 0)
     {
         if (check_VISA(credit_card_number))
         {
