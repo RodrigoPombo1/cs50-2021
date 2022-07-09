@@ -7,12 +7,13 @@ int main(void)
     int height;
     do
     {
-    height = get_int("Height of the pyramid? (it must be between 1 and 8 inclusive) ");
-    }while (height < 1 || height > 8);
+        height = get_int("Height of the pyramid? (it must be between 1 and 8 inclusive) ");
+    }
+    while (height < 1 || height > 8);
     //for loop to build the pyramid
-    for(int i = 1; i <= height; i++)
+    for (int i = 1; i <= height; i++)
     {
-        for(int j=0; j < height-i; j++)
+        for (int j = 0; j < height - i; j++)
         {
             printf(" ");
         }
