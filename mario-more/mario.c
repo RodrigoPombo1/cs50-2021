@@ -26,10 +26,6 @@ int main(void)
         {
             printf("#");
         }
-        for (int j = 0; j < height - i; j++)
-        {
-            printf(" ");
-        }
         printf("\n");
     }
 }
