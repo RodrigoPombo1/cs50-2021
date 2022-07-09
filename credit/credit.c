@@ -29,13 +29,13 @@ int main(void)
         sum += digit * 2;
         aux = aux / 10;
     }
-    int aux = sum + sum2;
-    printf(aux);
-    while ((aux) > 10)
+    int aux2 = sum + sum2;
+    printf("%i",aux2);
+    while ((aux2) > 10)
     {
-        aux = aux / 10;
+        aux2 = aux2 / 10;
     }
-    if (aux % 10 == 0)
+    if (aux2 % 10 == 0)
     {
         if (check_VISA(credit_card_number))
         {
