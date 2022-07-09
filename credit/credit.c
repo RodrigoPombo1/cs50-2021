@@ -30,11 +30,11 @@ int main(void)
         aux3 = 0;
         aux3 += (digit % 10) * 2;
         aux3 = (digit % 10)*2;
-        sum2 += aux3 % 10;
+        sum += aux3 % 10;
         if (aux3 >= 10)
         {
             aux3 = aux3 / 10;
-            sum2 += aux3;
+            sum += aux3;
         }
         aux = aux / 10;
     }
