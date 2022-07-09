@@ -24,9 +24,11 @@ int main(void)
     while (aux > 100)
     {
         digit = aux % 10;
+        printf("%i", digit);                                //
         sum2 += digit;
         aux = aux / 10;
         digit = aux % 10;
+        printf("%i", digit);                                //
         aux3 = digit * 2;
         sum += aux3 % 10;
         if (aux3 >= 10)
@@ -37,9 +39,9 @@ int main(void)
         aux = aux / 10;
     }
     int aux2 = sum + sum2;
-    printf("%i",sum);
-    printf("%i",sum2);
-    printf("%i",aux2);
+    printf("%i\n",sum);                                //
+    printf("%i\n",sum2);                             //
+    printf("%i\n",aux2);                               //
     while ((aux2) > 10)
     {
         aux2 = aux2 / 10;
