@@ -29,7 +29,7 @@ int main(void)
         sum += digit * 2;
         aux = aux / 10;
     }
-    int aux2 = sum + sum2;
+    int aux2 = sum + sum2; //é para adicionar os digitos da soma e não os numero, os digitos dos numeros, mas nao os numeros
     printf("%i",sum);
     printf("%i",sum2);
     printf("%i",aux2);
