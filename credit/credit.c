@@ -32,7 +32,7 @@ int main(void)
         aux = aux / 10;
         //get only the digit because it's the one that needs to be multiplied by 2
         digit = aux % 10;
-        printf("%i", digit);                                //
+        //printf("%i", digit);                                //
         //multiplies digit by 2
         aux3 = digit * 2;
         //gets the last digit of the sum
@@ -46,6 +46,7 @@ int main(void)
         aux = aux / 10;
     }
     int aux2 = sum + sum2;
+    printf("\n");                                   //
     printf("%i\n",sum);                                //
     printf("%i\n",sum2);                             //
     printf("%i\n",aux2);                               //
