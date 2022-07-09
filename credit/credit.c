@@ -75,7 +75,7 @@ int main(void)
     }
 }
 
-bool check_VISA(long card_number)
+bool check_AMEX(long card_number)
 {
 
     if (card_number / 100 000 000 000 000 == 34 || card_number / 100 000 000 000 000 == 37)
@@ -101,7 +101,7 @@ bool check_MASTERCARD(long card_number)
     }
 }
 
-bool check_AMEX(long card_number)
+bool check_VISA(long card_number)
 {
     if (card_number / 1 000 000 000 000 == 4 || card_number / 1 000 000 000 000 000 == 4)
     {
