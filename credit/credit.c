@@ -31,8 +31,8 @@ int main(void)
         do
         {
             aux3 += (digit % 10) * 2;
-        }while (aux3 > 10);
-        sum2 += aux3;
+            sum2 += 
+        }while (aux3 >= 10);
         aux = aux / 10;
     }
     int aux2 = sum + sum2;
