@@ -9,8 +9,8 @@ int main(void)
         credit_card_number = get_long("Number: ");
     }
     while (credit_card_number < 999999999999);
-
-    if ():
+    
+    if (not_invalid):
         if (first_two_numbers == ):
     else:
         printf("INVALID\n")
