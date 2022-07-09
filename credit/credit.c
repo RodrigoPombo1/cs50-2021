@@ -50,10 +50,6 @@ int main(void)
     printf("%i\n",sum);                                //
     printf("%i\n",sum2);                             //
     printf("%i\n",aux2);                               //
-    while ((aux2) > 10)
-    {
-        aux2 = aux2 / 10;
-    }
     if (aux2 % 10 == 0)
     {
         if (check_VISA(credit_card_number))
