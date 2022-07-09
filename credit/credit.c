@@ -37,11 +37,11 @@ int main(void)
         aux3 = digit * 2;
         //gets the last digit of the sum
         sum += aux3 % 10;
-        //if by multiplying by 2 the digit became a number with 2 digits, than we need to get the second digit
+        //if by multiplying by 2 the digit became a number with 2 digits, than we need to get the second digit, then it need to execute the code inside the if statement
         if (aux3 >= 10)
         {
-            aux3 = aux3 / 10; //
-            sum += aux3;
+            aux3 = aux3 / 10; //remove unit digit from the number (no longer needed)
+            sum += aux3; //gets the remaining digit
         }
         aux = aux / 10;
     }
