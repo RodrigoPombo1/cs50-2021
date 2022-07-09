@@ -21,7 +21,7 @@ int main(void)
     int sum2 = 0;
     int digit;
     int aux3 = 0;
-    while (aux > 100)
+    while (aux > 0)
     {
         //chooses last digit (always never the second to last)
         digit = aux % 10;
@@ -46,9 +46,9 @@ int main(void)
         aux = aux / 10;
     }
     int aux2 = sum + sum2;
-    //printf("%i\n",sum);                                //
-    //printf("%i\n",sum2);                             //
-    //printf("%i\n",aux2);                               //
+    printf("%i\n",sum);                                //
+    printf("%i\n",sum2);                             //
+    printf("%i\n",aux2);                               //
     while ((aux2) > 10)
     {
         aux2 = aux2 / 10;
