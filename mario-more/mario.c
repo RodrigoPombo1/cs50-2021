@@ -22,11 +22,11 @@ int main(void)
             printf("#");
         }
         printf("  ");
-                for (int j = 0; j < height - i; j++)
+        for (int j = 0; j < i; j++)
         {
             printf("#");
         }
-        for (int j = 0; j < i; j++)
+        for (int j = 0; j < height - i; j++)
         {
             printf(" ");
         }
