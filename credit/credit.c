@@ -28,10 +28,12 @@ int main(void)
         aux = aux / 10;
         digit = aux % 10;
         int aux3 = 0;
+        aux3 += (digit % 10) * 2;
         do
         {
-            aux3 += (digit % 10) * 2;
-            sum2 += aux3 
+            aux3 = (digit % 10)*2
+            sum2 += aux3 % 10;
+            aux3 /= 10;
         }while (aux3 >= 10);
         aux = aux / 10;
     }
