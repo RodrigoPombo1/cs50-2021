@@ -30,7 +30,7 @@ int main(void)
         sum2 += digit;
         //no longer need the digit from the credit card number, so remove it
         aux = aux / 10;
-        //get only the digit because it's the one that needs to be multiplie
+        //get only the digit because it's the one that needs to be multiplied by 2
         digit = aux % 10;
         printf("%i", digit);                                //
         aux3 = digit * 2;
