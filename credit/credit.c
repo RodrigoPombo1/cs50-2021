@@ -8,8 +8,8 @@ int main(void)
     {
         credit_card_number = get_long("Number: ");
     }
-    while (credit_card_number < 0);
-    
+    while (credit_card_number < 999999999999);
+
     if ():
         if (first_two_numbers == ):
     else:
