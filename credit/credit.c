@@ -30,6 +30,8 @@ int main(void)
         aux = aux / 10;
     }
     int aux2 = sum + sum2;
+    printf("%i",sum);
+    printf("%i",sum2);
     printf("%i",aux2);
     while ((aux2) > 10)
     {
