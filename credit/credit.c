@@ -71,8 +71,7 @@ int main(void)
 
 bool check_AMEX(long card_number)
 {
-
-    if (card_number / 100000000000000 == 34 || card_number / 100000000000000 == 37)
+    if (card_number / 10000000000000 == 34 || card_number / 10000000000000 == 37)
     {
         return true;
     }
@@ -84,8 +83,7 @@ bool check_AMEX(long card_number)
 
 bool check_MASTERCARD(long card_number)
 {
-
-    if (card_number / 1000000000000000 == 51 || card_number / 1000000000000000 == 52 || card_number / 1000000000000000 == 53 || card_number / 1000000000000000 == 53 || card_number / 1000000000000000 == 54 || card_number / 1000000000000000 == 55)
+    if (card_number / 100000000000000 == 51 || card_number / 1000000000000000 == 52 || card_number / 1000000000000000 == 53 || card_number / 1000000000000000 == 53 || card_number / 1000000000000000 == 54 || card_number / 1000000000000000 == 55)
     {
         return true;
     }
