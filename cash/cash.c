@@ -37,14 +37,14 @@ int main(void)
 
 int get_cents(void)
 {
-    // TODO
-    return 56;
+    int cents = get_int("Change owed: ")
+    return cents;
 }
 
 int calculate_quarters(int cents)
 {
-    // TODO
-    return 2;
+    int quarters = cents 
+    return quarters;
 }
 
 int calculate_dimes(int cents)
