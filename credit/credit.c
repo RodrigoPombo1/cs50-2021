@@ -25,7 +25,7 @@ int main(void)
         digit = aux % 10;
         sum2 += digit;
         aux = aux / 10;
-        int digit = aux % 10;
+        digit = aux % 10;
         sum += digit * 2;
         aux = aux / 10;
     }
@@ -55,7 +55,7 @@ int main(void)
     }
     else
     {
-        printf("INVALID\n")
+        printf("INVALID\n");
     }
 }
 
