@@ -20,16 +20,18 @@ int main(void)
     int sum = 0;
     int sum2 = 0;
     int digit;
+    int aux3 = 0;
     while (aux > 100)
     {
         digit = aux % 10;
         sum2 += digit;
         aux = aux / 10;
         digit = aux % 10;
+        int aux3 = 0;
         do
         {
-            sum += (digit % 10) * 2;
-        }while (digit > 10);
+            aux3 += (digit % 10) * 2;
+        }while (aux3 > 10);
         aux = aux / 10;
     }
     int aux2 = sum + sum2;
