@@ -11,21 +11,21 @@ int main(void)
     for (i = 0, len = strlen(text); i < len; i++)
     {
         char character = text[i]
-        if character != ""
+        if character = "!" || character = "?" || character = "."
         {
             letter += 1;
         }
-        else if space
+        else if character = " "
         {
             word += 1;
         }
-        else if
+        else
         {
-            sentence += 1;
+            letter += 1;
         }
     }
     //grade calculation
-    int grade =
+    int grade = 
     if 1 <= grade && grade <16
     {
         printf("Grade %i", grade);
