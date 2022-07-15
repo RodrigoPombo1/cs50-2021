@@ -6,7 +6,7 @@ int main(void)
 {
     string text = get_string("Text: ");
     int letter = 0;
-    int word = 0;
+    int word = 1;
     int sentence = 0;
     //check what is inside the string
     for (int i = 0, len = strlen(text); i < len; i++)
