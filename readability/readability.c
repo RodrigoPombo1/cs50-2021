@@ -1,6 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 int main(void)
 {
@@ -12,17 +13,17 @@ int main(void)
     for (int i = 0, len = strlen(text); i < len; i++)
     {
         char character = text[i];
-        if (character == '!' || character == '?' || character == '.')
+        if (isalpha(character))
         {
-            sentence += 1;
+            letter += 1;
         }
         else if (character == ' ')
         {
             word += 1;
         }
-        else //if (character != ',' && character != ':' && character != '"')
+        else if (character == '!' || character == '?' || character == '.')
         {
-            letter += 1;
+            sentence += 1;
         }
     }
     //grade calculation
