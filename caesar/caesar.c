@@ -6,10 +6,10 @@
 int main(int argc, string argv[])
 {
 
-    if (strlen(argv[]) == 2 && isalpha(argv[2]))
+    if (argc == 2 && isalpha(argv[1]))
     {
         string plaintext = getstring("plaintext: ");
-        int k = argv[2];
+        int k = argv[1];
         string ciphertext = "";
         for (int i = 0, len = strlen(plaintext); i < len; i++)
         {
