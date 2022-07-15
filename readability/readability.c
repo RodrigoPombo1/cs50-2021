@@ -11,12 +11,12 @@ int main(void)
     //check what is inside the string
     for (int i = 0, len = strlen(text); i < len; i++)
     {
-        string character = text[i];
-        if (character == "!" || character == "?" || character == ".")
+        char character = text[i];
+        if (character == '!' || character == '?' || character == '.')
         {
             sentence += 1;
         }
-        else if (character == " ")
+        else if (character == ' ')
         {
             word += 1;
         }
