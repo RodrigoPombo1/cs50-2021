@@ -1,21 +1,22 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
 int main(void)
 {
-    string text = get_string("Text: ")
+    string text = get_string("Text: ");
     int letter = 0;
     int word = 0;
     int sentence = 0;
     //check what is inside the string
-    for (i = 0, len = strlen(text); i < len; i++)
+    for (int i = 0, len = strlen(text); i < len; i++)
     {
-        char character = text[i]
-        if character = "!" || character = "?" || character = "."
+        string character = text[i];
+        if (character == "!" || character == "?" || character == ".")
         {
-            letter += 1;
+            sentence += 1;
         }
-        else if character = " "
+        else if (character == " ")
         {
             word += 1;
         }
@@ -25,12 +26,12 @@ int main(void)
         }
     }
     //grade calculation
-    int grade = 
-    if 1 <= grade && grade <16
+    int grade = 0.0588 * letter / word * 100 - 0.296 * sentence / word * 100 - 15.8;
+    if (1 <= grade && grade < 16)
     {
         printf("Grade %i", grade);
     }
-    else if grade < 1
+    else if (grade < 1)
     {
         printf("Before Grade 1");
     }
