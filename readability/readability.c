@@ -15,15 +15,15 @@ int main(void)
         char character = text[i];
         if (isalpha(character))
         {
-            letter += 1;
+            letter ++;
         }
         else if (character == ' ')
         {
-            word += 1;
+            word ++;
         }
         else if (character == '!' || character == '?' || character == '.')
         {
-            sentence += 1;
+            sentence ++;
         }
     }
     //grade calculation
