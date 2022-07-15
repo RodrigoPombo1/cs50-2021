@@ -26,12 +26,13 @@ int main(void)
         }
     }
     //grade calculation
-    int grade = 0.0588 * letter / word * 100 - 0.296 * sentence / word * 100 - 15.8;
-    if (1 <= grade && grade < 16)
+    float grade = 0.0588 * letter / word * 100 - 0.296 * sentence / word * 100 - 15.8;
+    int intgrade = grade;
+    if (1 <= intgrade && intgrade < 16)
     {
-        printf("Grade %i\n", grade);
+        printf("Grade %i\n", intgrade);
     }
-    else if (grade < 1)
+    else if (intgrade < 1)
     {
         printf("Before Grade 1\n");
     }
