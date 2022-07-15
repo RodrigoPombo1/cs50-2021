@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <math.h>
 
 int main(void)
 {
@@ -27,7 +28,7 @@ int main(void)
         }
     }
     //grade calculation
-    int grade = 0.0588 * (float) letter / (float) word * 100 - 0.296 * (float) sentence / (float) word * 100 - 15.8;
+    int grade = round(0.0588 * (float) letter / (float) word * 100 - 0.296 * (float) sentence / (float) word * 100 - 15.8);
     if (1 <= grade && grade < 16)
     {
         printf("Grade %i\n", grade);
