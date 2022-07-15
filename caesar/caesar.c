@@ -17,7 +17,7 @@ int main(int argc, string argv[])
             {
                 if (islower(plaintext[i]))
                 {
-                    ciphertext = ciphertext + (((plaintext[i] + k) - 65) % 26) + 65
+                    ciphertext = ciphertext + (((plaintext[i] + k) - 65) % 26) + 65;
                 }
                 else if (isupper(plaintext[i]))
                 {
