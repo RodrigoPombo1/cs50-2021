@@ -20,7 +20,7 @@ int main(void)
         {
             word += 1;
         }
-        else if (character != ',' && character != ':' )
+        else if (character != ',' && character != ':' && character != '"')
         {
             letter += 1;
         }
