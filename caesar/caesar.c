@@ -6,7 +6,7 @@
 int main(int argc, string argv[])
 {
 
-    if (arrlen(argv[]) == 2 && isalpha(argv[2]))
+    if (strlen(argv[]) == 2 && isalpha(argv[2]))
     {
         string plaintext = getstring("plaintext: ");
         int k = argv[2];
