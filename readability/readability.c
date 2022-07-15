@@ -8,9 +8,10 @@ int main(void)
     int word = 0;
     int sentence = 0;
     //check what is inside the string
-    for (i = 0, len = strlen(text); i < len; )
+    for (i = 0, len = strlen(text); i < len; i++)
     {
-        if letter
+        char character = text[i]
+        if character != ""
         {
             letter += 1;
         }
