@@ -5,7 +5,6 @@
 
 int main(int argc, string argv[])
 {
-
     if (argc == 2)
     {
         int error = 0;
@@ -49,8 +48,8 @@ int main(int argc, string argv[])
         {
             printf("Usage: ./caesar key\n");
         }
-    //else
-    //{
-    //    printf("Usage: ./caesar key\n");
-    //}
+    else
+    {
+        printf("Usage: ./caesar key\n");
+    }
 }
