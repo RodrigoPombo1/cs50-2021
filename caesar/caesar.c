@@ -21,7 +21,7 @@ int main(int argc, string argv[])
             int k = 0;
             for (int i = 0, len = strlen(argv[1]); i < len; i++)
             {
-                k = k + (int) argv[1][i];
+                k = k + (int) argv[1][i] - 48;
             }
             string ciphertext = "";
             for (int i = 0, len = strlen(plaintext); i < len; i++)
