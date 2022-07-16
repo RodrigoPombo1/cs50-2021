@@ -31,7 +31,7 @@ int main(int argc, string argv[])
                     }
                     else if (isupper(plaintext[i]))
                     {
-                        ciphertext = ciphertext + (int) ((( (int) plaintext[i] + k) - 97) % 26) + 97;
+                        ciphertext = ciphertext + (char) ((( (int) plaintext[i] + k) - 97) % 26) + 97;
                     }
                 }
                 else
