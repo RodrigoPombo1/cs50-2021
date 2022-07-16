@@ -22,7 +22,7 @@ int main(int argc, string argv[])
             int k = 0;
             for (int i = 0, len = strlen(argv[1]); i < len; i++)
             {
-                k = k + argv[1][i];
+                k = k + (int) argv[1][i];
             }
             string ciphertext = "";
             for (int i = 0, len = strlen(plaintext); i < len; i++)
@@ -49,8 +49,8 @@ int main(int argc, string argv[])
         {
             printf("Usage: ./caesar key\n");
         }
-    else
-    {
-        printf("Usage: ./caesar key\n");
-    }
+    //else
+    //{
+    //    printf("Usage: ./caesar key\n");
+    //}
 }
