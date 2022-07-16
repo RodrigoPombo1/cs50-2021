@@ -19,7 +19,7 @@ int main(int argc, string argv[])
         if (error == 0)
         {
             string plaintext = get_string("plaintext: ");
-            int k = (string) argv[1];
+            int k = (int) argv[1];
             string ciphertext = "";
             for (int i = 0, len = strlen(plaintext); i < len; i++)
             {
@@ -27,11 +27,11 @@ int main(int argc, string argv[])
                 {
                     if (islower(plaintext[i]))
                     {
-                        ciphertext = ciphertext + (char) ((( (char) plaintext[i] + k) - 65) % 26) + 65;
+                        ciphertext = ciphertext + (char) ((( (int) plaintext[i] + k) - 65) % 26) + 65;
                     }
                     else if (isupper(plaintext[i]))
                     {
-                        ciphertext = ciphertext + (char) ((( (char) plaintext[i] + k) - 97) % 26) + 97;
+                        ciphertext = ciphertext + (int) ((( (int) plaintext[i] + k) - 97) % 26) + 97;
                     }
                 }
                 else
