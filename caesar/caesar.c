@@ -30,6 +30,7 @@ int main(int argc, string argv[])
                 {
                     if (islower(plaintext[i]))
                     {
+                        printf("%c",  (char) ((( (int) plaintext[i] + k) - 65) % 26) + 65);        //////////
                         ciphertext = ciphertext + (char) ((( (int) plaintext[i] + k) - 65) % 26) + 65;
                     }
                     else if (isupper(plaintext[i]))
