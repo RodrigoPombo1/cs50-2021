@@ -23,7 +23,15 @@ int main(int argc, string argv[])
             int k = 0;
             for (int i = 0, len = strlen(argv[1]); i < len; i++)
             {
+                if (k == 0)
+                {
                 k = k + (int) argv[1][i] - 48;
+                }
+                else
+                {
+                    k = k * 10 * i + (int) argv[1][i] - 48;
+                }
+
             }
             //cycles through the entire text
             for (int i = 0, len = strlen(plaintext); i < len; i++)
