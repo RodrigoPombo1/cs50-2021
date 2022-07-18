@@ -11,7 +11,7 @@ int main(int argc, string argv[])
         int error = 0;
         for (int i = 0, len = strlen(argv[1]); i < len; i++)
         {
-            if ( (int) argv[1][i] < 48 || 57 < (int) argv[1][i])
+            if ((int) argv[1][i] < 48 || 57 < (int) argv[1][i])
             {
                 error ++;
             }
@@ -25,7 +25,7 @@ int main(int argc, string argv[])
             {
                 if (k == 0)
                 {
-                k = k + (int) argv[1][i] - 48;
+                    k = k + (int) argv[1][i] - 48;
                 }
                 else
                 {
@@ -41,11 +41,11 @@ int main(int argc, string argv[])
                     //converts the letters
                     if (islower(plaintext[i]))
                     {
-                        plaintext[i] = (char) ((( (int) plaintext[i] + k) - 97) % 26) + 97;
+                        plaintext[i] = (char)((((int) plaintext[i] + k) - 97) % 26) + 97;
                     }
                     else if (isupper(plaintext[i]))
                     {
-                        plaintext[i] = (char) ((( (int) plaintext[i] + k) - 65) % 26) + 65;
+                        plaintext[i] = (char)((((int) plaintext[i] + k) - 65) % 26) + 65;
                     }
                 }
             }
