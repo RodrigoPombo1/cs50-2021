@@ -11,7 +11,7 @@ int main(int argc, string argv[])
         int error = 0;
         for (int i = 0, len = strlen(argv[1]); i < len; i++)
         {
-            if ((int) argv[1][i] < 48 || 57 < (int) argv[1][i])
+            if ((int) argv[1][i] < 48 || 57 < (int) argv[1][i]) //
             {
                 error ++;
             }
