@@ -33,8 +33,8 @@ int main(int argc, string argv[])
                     //converts the letters
                     if (islower(plaintext[i]))
                     {
-                        printf("%c",  (char) ( (int) plaintext[i] + k);
-                        printf("%c",  (char) (( (int) plaintext[i] + k) - 65);
+                        printf("%c",  (char) ( (int) plaintext[i] + k));
+                        printf("%c",  (char) (( (int) plaintext[i] + k) - 65));
                         printf("%c",  (char) (( (int) plaintext[i] + k) - 65) % 26);        //////////
                         plaintext[i] = (char) ((( (int) plaintext[i] + k) - 65) % 26) + 65;
                     }
