@@ -41,11 +41,11 @@ int main(int argc, string argv[])
                     //converts the letters
                     if (islower(plaintext[i]))
                     {
-                        plaintext[i] = (char)((((int) plaintext[i] + k) - 97) % 26) + 97;
+                        plaintext[i] = (char)((((int) plaintext[i] + k) - 97) % 26) + 97; //
                     }
                     else if (isupper(plaintext[i]))
                     {
-                        plaintext[i] = (char)((((int) plaintext[i] + k) - 65) % 26) + 65;
+                        plaintext[i] = (char)((((int) plaintext[i] + k) - 65) % 26) + 65; //
                     }
                 }
             }
