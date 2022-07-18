@@ -36,6 +36,7 @@ int main(int argc, string argv[])
                         printf("%c",  (char) ( (int) plaintext[i] + k));
                         printf("%c",  (char) (( (int) plaintext[i] + k) - 65));
                         printf("%c",  (char) (( (int) plaintext[i] + k) - 65) % 26);        //////////
+                        printf("%C", (char) ((( (int) plaintext[i] + k) - 65) % 26) + 65);
                         plaintext[i] = (char) ((( (int) plaintext[i] + k) - 65) % 26) + 65;
                     }
                     else if (isupper(plaintext[i]))
