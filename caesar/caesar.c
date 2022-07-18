@@ -25,30 +25,24 @@ int main(int argc, string argv[])
             {
                 k = k + (int) argv[1][i] - 48;
             }
-            string ciphertext = "";
             //cycles through the entire text
             for (int i = 0, len = strlen(plaintext); i < len; i++)
             {
                 if (isalpha(plaintext[i]))
                 {
-                    //converts them to the cypertext
+                    //converts the letters
                     if (islower(plaintext[i]))
                     {
                         printf("%c",  (char) ((( (int) plaintext[i] + k) - 65) % 26) + 65);        //////////
-                        ciphertext = ciphertext + (char) ((( (int) plaintext[i] + k) - 65) % 26) + 65;
+                        plaintext[i] = (char) ((( (int) plaintext[i] + k) - 65) % 26) + 65;
                     }
                     else if (isupper(plaintext[i]))
                     {
-                        ciphertext = ciphertext + (char) ((( (int) plaintext[i] + k) - 97) % 26) + 97;
+                        plaintext[i] = (char) ((( (int) plaintext[i] + k) - 97) % 26) + 97;
                     }
                 }
-                //adds other characters from the original text that aren't letters to the cyphertext
-                else
-                {
-                    ciphertext = ciphertext + plaintext[i];
-                }
             }
-            printf("ciphertext: %s\n", ciphertext);
+            printf("ciphertext: %s\n", plaintext);
         }
         else
         {
