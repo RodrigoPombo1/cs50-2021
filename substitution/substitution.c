@@ -33,11 +33,11 @@ int main(int argc, string argv[])
                     {
                         if (isupper(character[i]))
                         {
-                            
+
                         }
                         else if (islower(character[i]))
                         {
-                            error2++;
+
                         }
                     }
                     aux[i] = (char) character[i];
