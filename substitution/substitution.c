@@ -35,7 +35,10 @@ int main(int argc, string argv[])
                     }
                     for (int j = 0; j < 26; j++)
                     {
-                        
+                        if (aux[j] == lowercasekey[i])
+                        {
+                            error2++;
+                        }
                     }
                     aux[i] = lowercasekey[i];
                 }
