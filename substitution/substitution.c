@@ -43,11 +43,29 @@ int main(int argc, string argv[])
                         //converts the plaintext to cyphertext
                         if (islower(plaintext[i]))
                         {
-                            plaintext[i] = key[(((int) plaintext[i]) - 97)];
+                            //if lower in plaintext then lower in cyphertext
+                            if (islower(key[(( (int) plaintext[i]) - 97)]));
+                            {
+                                plaintext[i] = key[(( (int) plaintext[i]) - 97)];
+                            }
+                            //if upper in plaintext then lower in cyphertext
+                            else
+                            {
+                                plaintext[i] = (char)  ((int) key[(( (int) plaintext[i]) - 97) - 32]);
+                            }
                         }
                         else if (isupper(plaintext[i]))
                         {
-                            plaintext[i] = key[(((int) plaintext[i]) - 65)];
+                            //if upper in plaintext then lower in cyphertext
+                            if (isupper(key[(((int) plaintext[i]) - 97)]));
+                            {
+                                plaintext[i] = key[(((int) plaintext[i]) - 97)];
+                            }
+                            //if lower in plaintext then lower in cyphertext
+                            else
+                            {
+                                plaintext[i] = (char) ((int) key[(((int) plaintext[i]) - 65) + 32]);
+                            }
                         }
                     }
                 }
