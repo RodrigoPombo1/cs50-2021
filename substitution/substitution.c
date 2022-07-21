@@ -13,34 +13,26 @@ int main(int argc, string argv[])
         if (strlen(argv[1]) == 26)
         {
             //checks if all the characters are letters
+            int error = 0;
             for (int i = 0, len = strlen(argv[1]); i < len; i++)
             {
                 if (!isalpha(argv[1]))
+                {
+                    error++;
+                }
             }
-
-                //checks if there is the same character (case insensitive)
-        int error = 0;
-        for (int i = 0, len = strlen(argv[1]); i < len; i++) // fazer um array e ir comparando ao array para ver se nao se repete
-        {
-            if ((int) argv[1][i] < 48 || 57 < (int) argv[1][i]) //
-            {
-                error ++;
-            }
-        }
             if (error == 0)
             {
-                //gets the key and converts it from a string to an integer
+                //checks if there is the same character (case insensitive)
+                int error = 0;
                 for (int i = 0, len = strlen(argv[1]); i < len; i++)
                 {
-                    if (k == 0)
+                    if (!isalpha(argv[1]))
                     {
-                        k = k + (int) argv[1][i] - 48;
+                        error++;
                     }
-                    else
-                    {
-                        k = k * 10 * i + (int) argv[1][i] - 48;
-                    }
-
+                }
+                if (error == 0)
                 {
                     string key = argv[1];
                     ///////////////////////////////////STARTS CONVERTING TO CYPHERTEXT/////////////////////////////////////////////////
