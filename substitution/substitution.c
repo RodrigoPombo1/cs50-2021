@@ -44,6 +44,7 @@ int main(int argc, string argv[])
                     string key = argv[1];
                     ///////////////////////////////////STARTS CONVERTING TO CYPHERTEXT/////////////////////////////////////////////////
                     string plaintext = get_string("plaintext: ");
+                    char cyphertext[strlen(plaintext)] = "";
                     //cycles through the entire text
                     for (int i = 0, len = strlen(plaintext); i < len; i++)
                     {
