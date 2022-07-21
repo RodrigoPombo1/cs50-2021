@@ -40,8 +40,9 @@ int main(int argc, string argv[])
                             error2++;
                         }
                     }
-                    aux[i] = lowercasekey[i];
+                    //aux[i] = lowercasekey[i];
                 }
+                printf("%s", lowercasekey);
                 if (error2 == 0)
                 {
                     string key = argv[1];
