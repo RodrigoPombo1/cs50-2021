@@ -36,7 +36,8 @@ int main(int argc, string argv[])
                             error2++;
                         }
                     }
-                    aux[i] = (char) character[i];
+                    //printf("%c", character[i]);
+                    //aux[i] = (char) character[i];
                 }
                 if (error2 == 0)
                 {
