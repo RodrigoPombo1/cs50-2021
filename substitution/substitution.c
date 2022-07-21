@@ -13,7 +13,11 @@ int main(int argc, string argv[])
         if (strlen(argv[1]) == 26)
         {
             //checks if all the characters are letters
-            
+            for (int i = 0, len = strlen(argv[1]); i < len; i++)
+            {
+                if (!isalpha(argv[1]))
+            }
+
                 //checks if there is the same character (case insensitive)
         int error = 0;
         for (int i = 0, len = strlen(argv[1]); i < len; i++) // fazer um array e ir comparando ao array para ver se nao se repete
@@ -37,46 +41,46 @@ int main(int argc, string argv[])
                         k = k * 10 * i + (int) argv[1][i] - 48;
                     }
 
-                }
-                ///////////////////////////////////STARTS CONVERTING TO CYPHERTEXT/////////////////////////////////////////////////
-                string plaintext = get_string("plaintext: ");
-                //cycles through the entire text
-                for (int i = 0, len = strlen(plaintext); i < len; i++)
                 {
-                    if (isalpha(plaintext[i]))
+                    string key = argv[1];
+                    ///////////////////////////////////STARTS CONVERTING TO CYPHERTEXT/////////////////////////////////////////////////
+                    string plaintext = get_string("plaintext: ");
+                    //cycles through the entire text
+                    for (int i = 0, len = strlen(plaintext); i < len; i++)
                     {
-                        //converts the plaintext to cyphertext
-                        if (islower(plaintext[i]))
+                        if (isalpha(plaintext[i]))
                         {
-                            //if lower in plaintext then lower in cyphertext
-                            if (islower(key[(( (int) plaintext[i]) - 97)]));
+                            //converts the plaintext to cyphertext
+                            if (islower(plaintext[i]))
                             {
-                                plaintext[i] = key[(( (int) plaintext[i]) - 97)];
+                                //if lower in plaintext then lower in cyphertext
+                                if (islower(key[(( (int) plaintext[i]) - 97)]));
+                                {
+                                    plaintext[i] = key[(( (int) plaintext[i]) - 97)];
+                                }
+                                //if upper in plaintext then lower in cyphertext
+                                else
+                                {
+                                    plaintext[i] = (char)  ((int) key[(( (int) plaintext[i]) - 97) - 32]);
+                                }
                             }
-                            //if upper in plaintext then lower in cyphertext
-                            else
+                            else if (isupper(plaintext[i]))
                             {
-                                plaintext[i] = (char)  ((int) key[(( (int) plaintext[i]) - 97) - 32]);
-                            }
-                        }
-                        else if (isupper(plaintext[i]))
-                        {
-                            //if upper in plaintext then lower in cyphertext
-                            if (isupper(key[(((int) plaintext[i]) - 97)]));
-                            {
-                                plaintext[i] = key[(((int) plaintext[i]) - 97)];
-                            }
-                            //if lower in plaintext then lower in cyphertext
-                            else
-                            {
-                                plaintext[i] = (char) ((int) key[(((int) plaintext[i]) - 65) + 32]);
+                                //if upper in plaintext then lower in cyphertext
+                                if (isupper(key[(((int) plaintext[i]) - 97)]));
+                                {
+                                    plaintext[i] = key[(((int) plaintext[i]) - 97)];
+                                }
+                                //if lower in plaintext then lower in cyphertext
+                                else
+                                {
+                                    plaintext[i] = (char) ((int) key[(((int) plaintext[i]) - 65) + 32]);
+                                }
                             }
                         }
                     }
-                }
-                printf("ciphertext: %s\n", plaintext);
-                ////////////////////////////////////////////END OF CONVERTING///////////////////////////////////////////////
-            }
+                    printf("ciphertext: %s\n", plaintext);
+                    ////////////////////////////////////////////END OF CONVERTING///////////////////////////////////////////////
                 }
                 else
                 {
