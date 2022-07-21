@@ -37,7 +37,7 @@ int main(int argc, string argv[])
                         }
                     }
                 }
-                if (error == 0)
+                if (error2 == 0)
                 {
                     string key = argv[1];
                     ///////////////////////////////////STARTS CONVERTING TO CYPHERTEXT/////////////////////////////////////////////////
