@@ -36,7 +36,6 @@ int main(int argc, string argv[])
                     for (int j = 0; j < 26; j++)
                     {
 
-
                     }
                     aux[i] = lowercasekey[i];
                 }
