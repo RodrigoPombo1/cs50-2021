@@ -22,8 +22,6 @@ int main(int argc, string argv[])
             if (error == 0)
             {
                 //gets the key and converts it from a string to an integer
-                string plaintext = get_string("plaintext: ");
-                int k = 0;
                 for (int i = 0, len = strlen(argv[1]); i < len; i++)
                 {
                     if (k == 0)
@@ -36,12 +34,13 @@ int main(int argc, string argv[])
                     }
 
                 }
+                string plaintext = get_string("plaintext: ");
                 //cycles through the entire text
                 for (int i = 0, len = strlen(plaintext); i < len; i++)
                 {
                     if (isalpha(plaintext[i]))
                     {
-                        //converts the letters
+                        //converts the plaintext to cyphertext
                         if (islower(plaintext[i]))
                         {
                             plaintext[i] = key[(((int) plaintext[i]) - 97)];
