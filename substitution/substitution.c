@@ -56,7 +56,7 @@ int main(int argc, string argv[])
                             }
                             else if (isupper(plaintext[i]))
                             {
-                                plaintext[i] = (int) lowercasekey[(((int) plaintext[i]) - 65)];
+                                plaintext[i] = ((int) lowercasekey[(((int) plaintext[i]) - 65)];
                             }
                         }
                     }
