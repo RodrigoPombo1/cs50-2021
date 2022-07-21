@@ -31,12 +31,15 @@ int main(int argc, string argv[])
                 {
                     for (int j = 0; j < 26; j++)
                     {
-                        if (character[i] == (char) aux[j])
+                        if (isupper(character[i]))
+                        {
+                            
+                        }
+                        else if (islower(character[i]))
                         {
                             error2++;
                         }
                     }
-                    printf("%c", (char) character[i]);
                     aux[i] = (char) character[i];
                 }
                 if (error2 == 0)
