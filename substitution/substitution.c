@@ -25,7 +25,6 @@ int main(int argc, string argv[])
             {
                 //checks if there is the same character (case insensitive)
                 int error2 = 0;
-                string aux = "00000000000000000000000000";
                 string lowercasekey = argv[1];
                 for (int i = 0, len = strlen(argv[1]); i < len; i++)
                 {
@@ -33,16 +32,14 @@ int main(int argc, string argv[])
                     {
                         lowercasekey[i] = (char) ((int) lowercasekey[i] + 32);
                     }
-                    for (int j = 0; j < 26; j++)
+                    for (int j = 0; j < i; j++)
                     {
-                        if (aux[j] == lowercasekey[i])
+                        if (lowercasekey[j] == lowercasekey[i])
                         {
                             error2++;
                         }
                     }
-                    //aux[i] = lowercasekey[i];
                 }
-                printf("%s", lowercasekey);
                 if (error2 == 0)
                 {
                     string key = argv[1];
