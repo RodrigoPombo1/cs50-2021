@@ -25,7 +25,7 @@ int main(int argc, string argv[])
             {
                 //checks if there is the same character (case insensitive)
                 int error2 = 0;
-                char aux[26] = "";
+                string aux = "00000000000000000000000000";
                 string character = argv[1];
                 for (int i = 0, len = strlen(argv[1]); i < len; i++)
                 {
@@ -37,14 +37,13 @@ int main(int argc, string argv[])
                         }
                     }
                     printf("%c", character[i]);
-                    aux[i] = character[i];
+                    aux[i] = (char) character[i];
                 }
                 if (error2 == 0)
                 {
                     string key = argv[1];
                     ///////////////////////////////////STARTS CONVERTING TO CYPHERTEXT/////////////////////////////////////////////////
                     string plaintext = get_string("plaintext: ");
-                    char cyphertext[] = "";
                     //cycles through the entire text
                     for (int i = 0, len = strlen(plaintext); i < len; i++)
                     {
