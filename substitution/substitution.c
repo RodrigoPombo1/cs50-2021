@@ -54,6 +54,7 @@ int main(int argc, string argv[])
                             {
                                 //if lower in plaintext then lower in cyphertext
                                 printf("%c", key[(((int) plaintext[i]) - 97)]); // tá a funcionar bem
+                                printf("%c", (char) ((int) key[(((int) plaintext[i]) - 65) + 32])); //tá a funcionar bem
                                 if (islower(key[(( (int) plaintext[i]) - 97)]))
                                 {
                                     plaintext[i] = key[(( (int) plaintext[i]) - 97)];
@@ -68,6 +69,7 @@ int main(int argc, string argv[])
                             {
                                 //if upper in plaintext then lower in cyphertext
                                 printf("%c", key[(((int) plaintext[i]) - 97)]); //tá a funcionar bem
+                                printf("%c", (char) ((int) key[(((int) plaintext[i]) - 65) + 32])); //tá a funcionar bem
                                 if (isupper(key[(((int) plaintext[i]) - 97)]))
                                 {
                                     plaintext[i] = key[(((int) plaintext[i]) - 97)];
