@@ -9,7 +9,7 @@ int main(int argc, string argv[])
     if (argc == 2)
     {
         int error = 0;
-        for (int i = 0, len = strlen(argv[1]); i < len; i++)
+        for (int i = 0, len = strlen(argv[1]); i < len; i++) // fazer um array e ir comparando ao array para ver se nao se repete
         {
             if ((int) argv[1][i] < 48 || 57 < (int) argv[1][i]) //
             {
