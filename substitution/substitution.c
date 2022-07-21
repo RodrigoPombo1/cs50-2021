@@ -55,12 +55,12 @@ int main(int argc, string argv[])
                                 //if lower in plaintext then lower in cyphertext
                                 if (islower(key[(( (int) plaintext[i]) - 97)]))
                                 {
-                                    plaintext[i] = key[(( (int) plaintext[i]) - 97)];
+                                    plaintext[i] = (char)key[(( (int) plaintext[i]) - 97)];
                                 }
                                 //if upper in plaintext then lower in cyphertext
                                 else
                                 {
-                                    plaintext[i] = (char)  ((int) key[(( (int) plaintext[i]) - 97) - 32]);
+                                    plaintext[i] = (char)((int) key[(( (int) plaintext[i]) - 97) - 32]);
                                 }
                             }
                             else if (isupper(plaintext[i]))
@@ -68,12 +68,12 @@ int main(int argc, string argv[])
                                 //if upper in plaintext then lower in cyphertext
                                 if (isupper(key[(((int) plaintext[i]) - 97)]))
                                 {
-                                    plaintext[i] = key[(((int) plaintext[i]) - 97)];
+                                    plaintext[i] = (char)key[(((int) plaintext[i]) - 97)];
                                 }
                                 //if lower in plaintext then lower in cyphertext
                                 else
                                 {
-                                    plaintext[i] = (char) ((int) key[(((int) plaintext[i]) - 65) + 32]);
+                                    plaintext[i] = (char)((int) key[(((int) plaintext[i]) - 65) + 32]);
                                 }
                             }
                         }
