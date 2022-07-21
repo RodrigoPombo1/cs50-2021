@@ -25,13 +25,13 @@ int main(int argc, string argv[])
             {
                 //checks if there is the same character (case insensitive)
                 int error2 = 0;
-                string aux[26];
+                string aux = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
                 for (int i = 0, len = strlen(argv[1]); i < len; i++)
                 {
-                    char character = argv[1][i];
+                    string character = argv[1];
                     for (int j = 0; j < 26; j++)
                     {
-                        if (character == aux[j])
+                        if (character[i] == aux[j])
                         {
                             error2++;
                         }
@@ -51,7 +51,7 @@ int main(int argc, string argv[])
                             if (islower(plaintext[i]))
                             {
                                 //if lower in plaintext then lower in cyphertext
-                                if (islower(key[(( (int) plaintext[i]) - 97)]));
+                                if (islower(key[(( (int) plaintext[i]) - 97)]))
                                 {
                                     plaintext[i] = key[(( (int) plaintext[i]) - 97)];
                                 }
@@ -64,7 +64,7 @@ int main(int argc, string argv[])
                             else if (isupper(plaintext[i]))
                             {
                                 //if upper in plaintext then lower in cyphertext
-                                if (isupper(key[(((int) plaintext[i]) - 97)]));
+                                if (isupper(key[(((int) plaintext[i]) - 97)]))
                                 {
                                     plaintext[i] = key[(((int) plaintext[i]) - 97)];
                                 }
