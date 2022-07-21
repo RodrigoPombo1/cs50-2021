@@ -26,9 +26,9 @@ int main(int argc, string argv[])
                 //checks if there is the same character (case insensitive)
                 int error2 = 0;
                 string aux = "00000000000000000000000000";
+                string character = argv[1];
                 for (int i = 0, len = strlen(argv[1]); i < len; i++)
                 {
-                    string character = argv[1];
                     for (int j = 0; j < 26; j++)
                     {
                         if (character[i] == aux[j])
