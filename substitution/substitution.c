@@ -51,9 +51,14 @@ int main(int argc, string argv[])
             }
             printf("ciphertext: %s\n", plaintext);
         }
+            else
+            {
+                printf("Key must only contain alphabetic characters.\n");
+                return 1;
+            }
         else
         {
-            printf("Usage: ./substitution key\n");
+            printf("Key must contain 26 characters.\n");
             return 1;
         }
     }
