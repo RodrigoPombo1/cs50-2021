@@ -34,6 +34,7 @@ int main(int argc, string argv[])
                         if (character[i] == aux[j])
                         {
                             error2++;
+                            printf("%c", character[i]);
                         }
                     }
                 }
