@@ -35,11 +35,8 @@ int main(int argc, string argv[])
                         {
                             error2++;
                         }
-                        else
-                        {
-                            aux[j] = character[i];
-                        }
                     }
+                    aux[i] = character[i];
                 }
                 if (error2 == 0)
                 {
