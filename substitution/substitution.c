@@ -30,7 +30,7 @@ int main(int argc, string argv[])
                 {
                     if (isupper(lowercasekey[i]))
                     {
-                        lowercasekey[i] = (char) ((int) lowercasekey[i] + 32);
+                        lowercasekey[i] = (char)((int) lowercasekey[i] + 32);
                     }
                     for (int j = 0; j < i; j++)
                     {
