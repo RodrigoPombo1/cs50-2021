@@ -5,6 +5,7 @@
 
 int main(int argc, string argv[])
 {
+    //////////////////////////////////////////////CHECKS THE KEY/////////////////////////////////////////////////
     //checks if the user made the mistake of not putting 2 arguments
     if (argc == 2)
     {
@@ -34,6 +35,7 @@ int main(int argc, string argv[])
                     }
 
                 }
+                ///////////////////////////////////STARTS CONVERTING TO CYPHERTEXT/////////////////////////////////////////////////
                 string plaintext = get_string("plaintext: ");
                 //cycles through the entire text
                 for (int i = 0, len = strlen(plaintext); i < len; i++)
