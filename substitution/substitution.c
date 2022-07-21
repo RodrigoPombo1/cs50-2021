@@ -53,9 +53,9 @@ int main(int argc, string argv[])
                             if (islower(plaintext[i]))
                             {
                                 //if lower in plaintext then lower in cyphertext
-                                if (islower(key[(( (int) plaintext[i]) - 97)]))
+                                if (islower(key[(((int) plaintext[i]) - 97)]))
                                 {
-                                    plaintext[i] = (char) key[(( (int) plaintext[i]) - 97)];
+                                    plaintext[i] = (char) key[(((int) plaintext[i]) - 97)];
                                 }
                                 //if upper in plaintext then lower in cyphertext
                                 else
