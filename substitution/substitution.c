@@ -25,7 +25,7 @@ int main(int argc, string argv[])
             {
                 //checks if there is the same character (case insensitive)
                 int error2 = 0;
-                string aux = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                string aux = "00000000000000000000000000";
                 for (int i = 0, len = strlen(argv[1]); i < len; i++)
                 {
                     string character = argv[1];
@@ -34,7 +34,6 @@ int main(int argc, string argv[])
                         if (character[i] == aux[j])
                         {
                             error2++;
-                            printf("%c", character[i]);
                         }
                     }
                 }
