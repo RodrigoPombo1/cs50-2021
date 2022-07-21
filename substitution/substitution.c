@@ -42,7 +42,6 @@ int main(int argc, string argv[])
                 }
                 if (error2 == 0)
                 {
-                    string key = argv[1];
                     ///////////////////////////////////STARTS CONVERTING TO CYPHERTEXT/////////////////////////////////////////////////
                     string plaintext = get_string("plaintext: ");
                     //cycles through the entire text
@@ -53,29 +52,11 @@ int main(int argc, string argv[])
                             //converts the plaintext to cyphertext
                             if (islower(plaintext[i]))
                             {
-                                //if lower in plaintext then lower in cyphertext
-                                if (islower(key[(((int) plaintext[i]) - 97)]))
-                                {
-                                    plaintext[i] = (char) key[(((int) plaintext[i]) - 97)];
-                                }
-                                //if upper in plaintext then lower in cyphertext
-                                else
-                                {
-                                    plaintext[i] = (char)((int) key[(( (int) plaintext[i]) - 97) - 32]);
-                                }
+                                plaintext[i] = lowercasekey[(((int) plaintext[i]) - 97)];
                             }
                             else if (isupper(plaintext[i]))
                             {
-                                //if upper in plaintext then lower in cyphertext
-                                if (isupper(key[(((int) plaintext[i]) - 97)]))
-                                {
-                                    plaintext[i] = (char) key[(((int) plaintext[i]) - 97)];
-                                }
-                                //if lower in plaintext then lower in cyphertext
-                                else
-                                {
-                                    plaintext[i] = (char)((int) key[(((int) plaintext[i]) - 65) + 32]);
-                                }
+                                plaintext[i] = lowercasekey[(((int) plaintext[i]) - 97)];
                             }
                         }
                     }
