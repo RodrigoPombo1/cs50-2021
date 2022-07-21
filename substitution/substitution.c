@@ -25,11 +25,15 @@ int main(int argc, string argv[])
             {
                 //checks if there is the same character (case insensitive)
                 int error = 0;
+                string aux[26];
                 for (int i = 0, len = strlen(argv[1]); i < len; i++)
                 {
-                    if (!isalpha(argv[1]))
+                    for (int j = 0; j < 26; j++)
                     {
-                        error++;
+                        if (argv[1][i] == aux[j])
+                        {
+                            error++;
+                        }
                     }
                 }
                 if (error == 0)
