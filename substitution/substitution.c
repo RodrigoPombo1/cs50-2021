@@ -10,6 +10,7 @@ int main(int argc, string argv[])
     {
         //checks if the key the user provided contains 26 characters
             //checks if all the characters are letters
+                //checks if there is the same character (case insensitive)
         int error = 0;
         for (int i = 0, len = strlen(argv[1]); i < len; i++) // fazer um array e ir comparando ao array para ver se nao se repete
         {
@@ -53,6 +54,11 @@ int main(int argc, string argv[])
                 }
                 printf("ciphertext: %s\n", plaintext);
             }
+                else
+                {
+                    printf("Key must not contain repeated characters.\n");
+                    return 1;
+                }
             else
             {
                 printf("Key must only contain alphabetic characters.\n");
