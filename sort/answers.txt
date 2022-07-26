@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: Because it was the first to finish sorting the already sorted sorted50000.txt (this file shows us the minimum time in which this algorithm could sort any file of that size) and when comparing the big omega (lower bound on the number of steps required to solved the sort) to the big omega of the other sorting algorithms, it should have also been the first to finish sorting.
+
+sort2 uses: Merge Sort
+
+How do you know?: Because it was the second to finish sorting the already sorted sorted50000.txt (this file shows us the minimum time in which this algorithm could sort any file of that size) and when comparing the big omega (lower bound on the number of steps required to solved the sort) to the big omega of the other sorting algorithms, it should have also been the second to finish sorting.
+
+sort3 uses: Selection Sort
+
+How do you know?: Because it was the last to finish sorting the already sorted sorted50000.txt (this file shows us the minimum time in which this algorithm could sort any file of that size) and when comparing the big omega (lower bound on the number of steps required to solved the sort) to the big omega of the other sorting algorithms, it should have also been the last to finish sorting.
