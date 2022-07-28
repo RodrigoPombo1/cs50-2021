@@ -93,9 +93,9 @@ void print_winner(void)
     }
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].votes == candidates[winner_index].votes)
+        if (candidates[i].votes == candidates[winners_index].votes)
         {
-            printf("%s", candidate[i].name);
+            printf("%s", candidates[i].name);
         }
     }
     return;
