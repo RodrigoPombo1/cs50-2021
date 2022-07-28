@@ -70,7 +70,7 @@ bool vote(string name)
     {
         if ()
         {
-            return
+            
         }
     }
     return false;
