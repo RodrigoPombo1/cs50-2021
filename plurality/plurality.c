@@ -67,11 +67,11 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     int vote = 0;
-    for (i = 0; i < ;i++)
+    for (i = 0; i < candidate_count; i++)
     {
-        if ()
+        if (name == candidates[i].name)
         {
-
+            candidates[i].votes++;
             return false;
         }
     }
@@ -81,6 +81,14 @@ bool vote(string name)
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
-    // TODO
+    int vote = 0;
+    for (i = 0; i < candidate_count; i++)
+    {
+        if (name == candidates[i].name)
+        {
+            candidates[i].votes++;
+        }
+    }
+    printf("%s", candidate[].name);
     return;
 }
