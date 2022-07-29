@@ -155,6 +155,7 @@ void tabulate(void)
             if (candidates[preferences[i][j]].eliminated == false)
             {
                 candidates[j].votes++;
+                printf("%s", candidates[j].votes);                       ////////////////////////////////////////////////
                 voted++;
             }
         }
