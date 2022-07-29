@@ -165,7 +165,11 @@ bool print_winner(void)
 {
     for (int i = 0; i < candidate_count; i++)
     {
-        i
+        int half = candidate_count / 2;
+        if (candidates[i].votes > half)
+        {
+            return true;
+        }
     }
     return false;
 }
