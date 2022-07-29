@@ -192,8 +192,15 @@ int find_min(void)
 // Return true if the election is tied between all candidates, false otherwise
 bool is_tie(int min)
 {
-    // TODO
-    return false;
+    
+    if (number_of_same_candidates_with_min_votes = number_of_candidates_still_in_the_election)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
 
 // Eliminate the candidate (or candidates) in last place
