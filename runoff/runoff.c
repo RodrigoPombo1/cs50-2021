@@ -186,7 +186,6 @@ int find_min(void)
         {
             min = candidate[i].votes;
             position_min = i;
-
         }
     }
     return position_min;
