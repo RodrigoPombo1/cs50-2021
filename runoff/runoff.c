@@ -173,6 +173,7 @@ bool print_winner(void)
             valid_candidate_count++;
         }
     }
+    printf("%i", valid_candidate_count) //////////////////
     for (int i = 0; i < candidate_count; i++)
     {
         int half = valid_candidate_count / 2;
