@@ -170,7 +170,7 @@ bool print_winner(void)
         int half = candidate_count / 2;
         if (candidates[i].votes > half)
         {
-            printf("%s\n", candidates[i].name);
+            printf("%s", candidates[i].name);
             return true;
         }
     }
