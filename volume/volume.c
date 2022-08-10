@@ -43,9 +43,9 @@ int main(int argc, char *argv[])
     while (fread(&buffer, sizeof(int16_t), 1, input))
     {
         //modify
-
+        buffer *= factor;
         //copy to output file
-
+        fwrite(&buffer, sizeof(int16_t), 1, output);
     }
     // Close files
     fclose(input);
