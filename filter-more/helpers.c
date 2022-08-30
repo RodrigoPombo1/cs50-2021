@@ -39,8 +39,17 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     //does the 4 corners
-    //does first row, last row, first colon and last colon (except the corners)
-    //does all the others that aren't the first/last row/colon
+    //does first row, last row, first column and last column (except the corners)
+
+    //does all the others that aren't the first/last row/column
+    //each row
+    for (int i = 1; i < height - 1; i++)
+    {
+        //each column
+        for (int j = 1; j < width - 1; j++)
+        {
+        }
+    }
     return;
 }
 
@@ -48,7 +57,16 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 void edges(int height, int width, RGBTRIPLE image[height][width])
 {
     //does the 4 corners
-    //does first row, last row, first colon and last colon (except the corners)
-    //does all the others that aren't the first/last row/colon
+    //does first row, last row, first column and last column (except the corners)
+
+    //does all the others that aren't the first/last row/column
+    //each row
+    for (int i = 1; i < height - 1; i++)
+    {
+        //each column
+        for (int j = 1; j < width - 1; j++)
+        {
+        }
+    }
     return;
 }
