@@ -47,5 +47,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 // Detect edges
 void edges(int height, int width, RGBTRIPLE image[height][width])
 {
+    //does the 4 corners
+    //does first row, last row, first colon and last colon (except the corners)
+    //does all the others that aren't the first/last row/colon
     return;
 }
