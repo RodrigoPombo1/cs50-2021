@@ -42,13 +42,13 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
             auxgreen = image[i][j].rgbtGreen;
             //swap one with the other (the j with width - j)
             //swapping the left part
-            image[i][j].rgbtBlue = image[i][width - j].rgbtBlue;
-            image[i][j].rgbtRed = image[i][width - j].rgbtRed;
-            image[i][j].rgbtGreen = image[i][width - j].rgbtGreen;
+            image[i][j].rgbtBlue = image[i][width - j - 1].rgbtBlue;
+            image[i][j].rgbtRed = image[i][width - j - 1].rgbtRed;
+            image[i][j].rgbtGreen = image[i][width - j - 1].rgbtGreen;
             //swapping the right part
-            image[i][width - j].rgbtBlue = auxblue;
-            image[i][width - j].rgbtRed = auxred;
-            image[i][width - j].rgbtGreen = auxgreen;
+            image[i][width - j - 1].rgbtBlue = auxblue;
+            image[i][width - j - 1].rgbtRed = auxred;
+            image[i][width - j - 1].rgbtGreen = auxgreen;
         }
     }
     return;
