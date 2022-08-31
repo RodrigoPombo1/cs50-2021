@@ -6,12 +6,14 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
     //selects pixel and averages it's green blue and red values and changes the green blue and red values to the average
     //loops through the whole image
     //each row
+    int average;
     for (int i = 0; i < height; i++)
     {
         //each column
         for (int j = 0; j < width; j++)
         {
         //calculates the average of blue, green and red values
+        average = (image[i][j]. + image[i][j]. + image[i][j]. ) / 3
         //changes the values to the average
         }
     }
