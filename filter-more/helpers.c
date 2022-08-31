@@ -30,10 +30,11 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     //loops through the whole image
     //each row
     int auxblue, auxred, auxgreen;
+    int middle = round(width / 2);
     for (int i = 0; i < height; i++)
     {
         //each column
-        for (int j = 0; j < width / 2; j++)
+        for (int j = 0; j < middle; j++)
         {
         //copy to an auxiliary variable to not lose the value
         auxblue = image[i][j].rgbtBlue;
