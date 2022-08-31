@@ -13,12 +13,12 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
         //each column
         for (int j = 0; j < width; j++)
         {
-        //calculates the average of blue, green and red values
-        average = round((float)(image[i][j].rgbtBlue + image[i][j].rgbtRed + image[i][j].rgbtGreen ) / 3);
-        //changes the values to the average
-        image[i][j].rgbtBlue = average;
-        image[i][j].rgbtRed = average;
-        image[i][j].rgbtGreen = average;
+            //calculates the average of blue, green and red values
+            average = round((float)(image[i][j].rgbtBlue + image[i][j].rgbtRed + image[i][j].rgbtGreen) / 3);
+            //changes the values to the average
+            image[i][j].rgbtBlue = average;
+            image[i][j].rgbtRed = average;
+            image[i][j].rgbtGreen = average;
         }
     }
     return;
@@ -36,19 +36,19 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
         //each column
         for (int j = 0; j < middle; j++)
         {
-        //copy to an auxiliary variable to not lose the value
-        auxblue = image[i][j].rgbtBlue;
-        auxred = image[i][j].rgbtRed;
-        auxgreen = image[i][j].rgbtGreen;
-        //swap one with the other (the j with width - j)
-        //swapping the left part
-        image[i][j].rgbtBlue = image[i][width - j].rgbtBlue;
-        image[i][j].rgbtRed = image[i][width - j].rgbtRed;
-        image[i][j].rgbtGreen = image[i][width - j].rgbtGreen;
-        //swapping the right part
-        image[i][width - j].rgbtBlue = auxblue;
-        image[i][width - j].rgbtRed = auxred;
-        image[i][width - j].rgbtGreen = auxgreen;
+            //copy to an auxiliary variable to not lose the value
+            auxblue = image[i][j].rgbtBlue;
+            auxred = image[i][j].rgbtRed;
+            auxgreen = image[i][j].rgbtGreen;
+            //swap one with the other (the j with width - j)
+            //swapping the left part
+            image[i][j].rgbtBlue = image[i][width - j].rgbtBlue;
+            image[i][j].rgbtRed = image[i][width - j].rgbtRed;
+            image[i][j].rgbtGreen = image[i][width - j].rgbtGreen;
+            //swapping the right part
+            image[i][width - j].rgbtBlue = auxblue;
+            image[i][width - j].rgbtRed = auxred;
+            image[i][width - j].rgbtGreen = auxgreen;
         }
     }
     return;
