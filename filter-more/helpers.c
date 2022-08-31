@@ -29,13 +29,25 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
     //loops through the whole image
     //each row
+    int auxblue, auxred, auxgreen;
     for (int i = 0; i < height; i++)
     {
         //each column
         for (int j = 0; j < width; j++)
         {
         //copy to an auxiliary variable to not lose the value
+        auxblue = image[i][j].rgbtBlue;
+        auxred = image[i][j].rgbtRed;
+        auxgreen = image[i][j].rgbtGreen;
         //swap one with the other (the j with width - j)
+        //swapping the left part
+        image[i][j].rgbtBlue = image[height - i][width - j].rgbtBlue;
+        image[i][j].rgbtRed = image[height - i][width - j].rgbtRed;
+        image[i][j].rgbtGreen = image[height - i][width - j].rgbtGreen;
+        //swapping the right part
+        image[height - i][width - j].rgbtBlue = auxblue;
+        image[height - i][width - j].rgbtRed = auxred;
+        image[height - i][width - j].rgbtGreen = auxgreen;
         }
     }
     return;
