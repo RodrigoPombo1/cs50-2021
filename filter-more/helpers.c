@@ -30,7 +30,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     //loops through the whole image
     //each row
     int auxblue, auxred, auxgreen;
-    int middle = round(width / 2);
+    int middle = width / 2;
     for (int i = 0; i < height; i++)
     {
         //each column
