@@ -31,6 +31,10 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     //each row
     int auxblue, auxred, auxgreen;
     int middle = width / 2;
+    if (middle == 0)
+    {
+        middle = 1;
+    }
     for (int i = 0; i < height; i++)
     {
         //each column
