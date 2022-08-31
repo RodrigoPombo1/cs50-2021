@@ -57,6 +57,18 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
+    //creates a copy of the original image that won't be modified
+    RGBTRIPLE image2[height][width];
+    //eachrow
+    for (int i = 0; i < height; i++)
+    {
+        //each column
+        for (int j = 0; j < width; j++)
+        {
+            image2[i][j] = image[i][j];
+        }
+    }
+
     //does the 4 corners
 
     //top left
