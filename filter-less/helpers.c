@@ -123,7 +123,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     image[0][width - 1].rgbtBlue = round((float)(image2[0][width - 1].rgbtBlue + image2[0][width - 2].rgbtBlue + image2[1][width
                                          - 1].rgbtBlue + image2[1][width - 2].rgbtBlue) / 4);
     image[0][width - 1].rgbtGreen = round((float)(image2[0][width - 1].rgbtGreen + image2[0][width - 2].rgbtGreen
-                                        + image2[1][width - 1].rgbtGreen + image2[1][width - 2].rgbtGreen) / 4);
+                                          + image2[1][width - 1].rgbtGreen + image2[1][width - 2].rgbtGreen) / 4);
     //bottom left
     image[height - 1][0].rgbtRed = round((float)(image2[height - 1][0].rgbtRed + image2[height - 1][1].rgbtRed
                                          + image2[height - 2][0].rgbtRed + image2[height - 2][1].rgbtRed) / 4);
@@ -135,39 +135,39 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     image[height - 1][width - 1].rgbtRed = round((float)(image2[height - 1][width - 1].rgbtRed + image2[height - 1][width - 2].rgbtRed
                                            + image2[height - 2][width - 1].rgbtRed + image2[height - 2][width - 2].rgbtRed) / 4);
     image[height - 1][width - 1].rgbtGreen = round((float)(image2[height - 1][width - 1].rgbtGreen + image2[height - 1][width
-                            - 2].rgbtGreen + image2[height - 2][width - 1].rgbtGreen + image2[height - 2][width - 2].rgbtGreen) / 4);
+            - 2].rgbtGreen + image2[height - 2][width - 1].rgbtGreen + image2[height - 2][width - 2].rgbtGreen) / 4);
     image[height - 1][width - 1].rgbtBlue = round((float)(image2[height - 1][width - 1].rgbtBlue + image2[height - 1][width -
-                                2].rgbtBlue + image2[height - 2][width - 1].rgbtBlue + image2[height - 2][width - 2].rgbtBlue) / 4);
+                                            2].rgbtBlue + image2[height - 2][width - 1].rgbtBlue + image2[height - 2][width - 2].rgbtBlue) / 4);
 
     //does first row, last row, first column and last column (except the corners)
 
     //top row
-    for(int i = 1; i < width - 1; i++)
+    for (int i = 1; i < width - 1; i++)
     {
         image[0][i] =
     }
     //bottom row
-    for(int i = 1; i < width - 1; i++)
+    for (int i = 1; i < width - 1; i++)
     {
         image[height - 2][i] =
     }
     //left row
-    for(int i = 1; i < height - 1; i++)
+    for (int i = 1; i < height - 1; i++)
     {
         image[i][0] =
     }
     //right row
-    for(int i = 1; i < height - 1; i++)
+    for (int i = 1; i < height - 1; i++)
     {
         image[i][width - 2] =
     }
 
     //does all the others that aren't the first/last row/column
     //each row
-    for(int i = 1; i < height - 1; i++)
+    for (int i = 1; i < height - 1; i++)
     {
         //each column
-        for(int j = 1; j < width - 1; j++)
+        for (int j = 1; j < width - 1; j++)
         {
         }
     }
