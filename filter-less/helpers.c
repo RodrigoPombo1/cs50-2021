@@ -144,7 +144,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     //top row
     for (int i = 1; i < width - 1; i++)
     {
-        image[0][i] =
+        image[0][i] = round((float))
     }
     //bottom row
     for (int i = 1; i < width - 1; i++)
