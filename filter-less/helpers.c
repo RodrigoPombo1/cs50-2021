@@ -112,13 +112,17 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     //does the 4 corners
 
     //top left
-    image[0][0] =
+    image[0][0].rgbtRed = round((float)(image[0][0].rgbtRed + image[0][1].rgbtRed + image[1][0].rgbtRed + image[1][1].rgbtRed) / 4);
+    image[0][0].rgbtBlue = round((float)(image[0][0].rgbtBlue + image[0][1].rgbtBlue + image[1][0].rgbtBlue + image[1][1].rgbtBlue) / 4);
+    image[0][0].rgbtGreen = round((float)(image[0][0].rgbtGreen + image[0][1].rgbtGreen + image[1][0].rgbtGreen + image[1][1].rgbtGreen) / 4);
     //top right
-    image[0][width - 1] =
+    image[0][width - 1].rgbtRed = round((float) (image[0][width - 1].rgbtRed + image[0][width - 2].rgbtRed + image[1][width - 1].rgbtRed + image[1][width - 2].rgbtRed) / 4);
+    image[0][width - 1].rgbtBlue = round((float) (image[0][width - 1].rgbtBlue + image[0][width - 2].rgbtBlue + image[1][width - 1].rgbtBlue + image[1][width - 2].rgbtBlue) / 4);
+    image[0][width - 1].rgbtGreen = round((float) (image[0][width - 1].rgbtGreen + image[0][width - 2].rgbtGreen + image[1][width - 1].rgbtGreen + image[1][width - 2].rgbtGreen) / 4);
     //bottom left
-    image[height - 1][0] =
+    image[height - 1][0].rgbtRed = round((float) (image[0][0].rgbtRed + image[0][1].rgbtRed + image[1][0].rgbtRed + image[1][1].rgbtRed) / 4);
     //bottom right
-    image[height - 1][width - 1] =
+    image[height - 1][width - 1].rgbtRed = round((float) (image[0][0].rgbtRed + image[0][1].rgbtRed + image[1][0].rgbtRed + image[1][1].rgbtRed) / 4);
 
     //does first row, last row, first column and last column (except the corners)
 
