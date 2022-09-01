@@ -112,7 +112,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     //does the 4 corners
 
     //top left
-    image[0][0] =
+    image[0][0] = 0
     //top right
     image[0][width - 1] =
     //bottom left
