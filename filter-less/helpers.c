@@ -131,32 +131,32 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     //does first row, last row, first column and last column (except the corners)
 
     //top row
-    for (int i = 1; i < width - 1; i++)
+    for(int i = 1; i < width - 1; i++)
     {
         image[0][i] =
     }
     //bottom row
-    for (int i = 1; i < width - 1; i++)
+    for(int i = 1; i < width - 1; i++)
     {
         image[height - 2][i] =
     }
     //left row
-    for (int i = 1; i < height - 1; i++)
+    for(int i = 1; i < height - 1; i++)
     {
         image[i][0] =
     }
     //right row
-    for (int i = 1; i < height - 1; i++)
+    for(int i = 1; i < height - 1; i++)
     {
         image[i][width - 2] =
     }
 
     //does all the others that aren't the first/last row/column
     //each row
-    for (int i = 1; i < height - 1; i++)
+    for(int i = 1; i < height - 1; i++)
     {
         //each column
-        for (int j = 1; j < width - 1; j++)
+        for(int j = 1; j < width - 1; j++)
         {
         }
     }
