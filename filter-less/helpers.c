@@ -113,20 +113,31 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
     //top left
     image[0][0].rgbtRed = round((float)(image2[0][0].rgbtRed + image2[0][1].rgbtRed + image2[1][0].rgbtRed + image2[1][1].rgbtRed) / 4);
-    image[0][0].rgbtBlue = round((float)(image2[0][0].rgbtBlue + image2[0][1].rgbtBlue + image2[1][0].rgbtBlue + image2[1][1].rgbtBlue) / 4);
-    image[0][0].rgbtGreen = round((float)(image2[0][0].rgbtGreen + image2[0][1].rgbtGreen + image2[1][0].rgbtGreen + image2[1][1].rgbtGreen) / 4);
+    image[0][0].rgbtBlue = round((float)(image2[0][0].rgbtBlue + image2[0][1].rgbtBlue + image2[1][0].rgbtBlue
+                                         + image2[1][1].rgbtBlue) / 4);
+    image[0][0].rgbtGreen = round((float)(image2[0][0].rgbtGreen + image2[0][1].rgbtGreen + image2[1][0].rgbtGreen
+                                        + image2[1][1].rgbtGreen) / 4);
     //top right
-    image[0][width - 1].rgbtRed = round((float) (image2[0][width - 1].rgbtRed + image2[0][width - 2].rgbtRed + image2[1][width - 1].rgbtRed + image2[1][width - 2].rgbtRed) / 4);
-    image[0][width - 1].rgbtBlue = round((float) (image2[0][width - 1].rgbtBlue + image2[0][width - 2].rgbtBlue + image2[1][width - 1].rgbtBlue + image2[1][width - 2].rgbtBlue) / 4);
-    image[0][width - 1].rgbtGreen = round((float) (image2[0][width - 1].rgbtGreen + image2[0][width - 2].rgbtGreen + image2[1][width - 1].rgbtGreen + image2[1][width - 2].rgbtGreen) / 4);
+    image[0][width - 1].rgbtRed = round((float)(image2[0][width - 1].rgbtRed + image2[0][width - 2].rgbtRed + image2[1][width -
+                                    1].rgbtRed + image2[1][width - 2].rgbtRed) / 4);
+    image[0][width - 1].rgbtBlue = round((float)(image2[0][width - 1].rgbtBlue + image2[0][width - 2].rgbtBlue + image2[1][width
+                                    - 1].rgbtBlue + image2[1][width - 2].rgbtBlue) / 4);
+    image[0][width - 1].rgbtGreen = round((float)(image2[0][width - 1].rgbtGreen + image2[0][width - 2].rgbtGreen
+                                    + image2[1][width - 1].rgbtGreen + image2[1][width - 2].rgbtGreen) / 4);
     //bottom left
-    image[height - 1][0].rgbtRed = round((float) (image2[height - 1][0].rgbtRed + image2[height - 1][1].rgbtRed + image2[height - 2][0].rgbtRed + image2[height - 2][1].rgbtRed) / 4);
-    image[height - 1][0].rgbtGreen = round((float) (image2[height - 1][0].rgbtGreen + image2[height - 1][1].rgbtGreen + image2[height - 2][0].rgbtGreen + image2[height - 2][1].rgbtGreen) / 4);
-    image[height - 1][0].rgbtBlue = round((float) (image2[height - 1][0].rgbtBlue + image2[height - 1][1].rgbtBlue + image2[height - 2][0].rgbtBlue + image2[height - 2][1].rgbtBlue) / 4);
+    image[height - 1][0].rgbtRed = round((float)(image2[height - 1][0].rgbtRed + image2[height - 1][1].rgbtRed
+                                        + image2[height - 2][0].rgbtRed + image2[height - 2][1].rgbtRed) / 4);
+    image[height - 1][0].rgbtGreen = round((float)(image2[height - 1][0].rgbtGreen + image2[height - 1][1].rgbtGreen
+                                        + image2[height - 2][0].rgbtGreen + image2[height - 2][1].rgbtGreen) / 4);
+    image[height - 1][0].rgbtBlue = round((float)(image2[height - 1][0].rgbtBlue + image2[height - 1][1].rgbtBlue
+                                        + image2[height - 2][0].rgbtBlue + image2[height - 2][1].rgbtBlue) / 4);
     //bottom right
-    image[height - 1][width - 1].rgbtRed = round((float) (image2[height - 1][width - 1].rgbtRed + image2[height - 1][width - 2].rgbtRed + image2[height - 2][width - 1].rgbtRed + image2[height - 2][width - 2].rgbtRed) / 4);
-    image[height - 1][width - 1].rgbtGreen = round((float) (image2[height - 1][width - 1].rgbtGreen + image2[height - 1][width - 2].rgbtGreen + image2[height - 2][width - 1].rgbtGreen + image2[height - 2][width - 2].rgbtGreen) / 4);
-    image[height - 1][width - 1].rgbtBlue = round((float) (image2[height - 1][width - 1].rgbtBlue + image2[height - 1][width - 2].rgbtBlue + image2[height - 2][width - 1].rgbtBlue + image2[height - 2][width - 2].rgbtBlue) / 4);
+    image[height - 1][width - 1].rgbtRed = round((float)(image2[height - 1][width - 1].rgbtRed + image2[height - 1][width - 2].rgbtRed
+                                            + image2[height - 2][width - 1].rgbtRed + image2[height - 2][width - 2].rgbtRed) / 4);
+    image[height - 1][width - 1].rgbtGreen = round((float)(image2[height - 1][width - 1].rgbtGreen + image2[height - 1][width - 2].rgbtGreen
+                                             + image2[height - 2][width - 1].rgbtGreen + image2[height - 2][width - 2].rgbtGreen) / 4);
+    image[height - 1][width - 1].rgbtBlue = round((float)(image2[height - 1][width - 1].rgbtBlue + image2[height - 1][width - 2].rgbtBlue
+                                                + image2[height - 2][width - 1].rgbtBlue + image2[height - 2][width - 2].rgbtBlue) / 4);
 
     //does first row, last row, first column and last column (except the corners)
 
