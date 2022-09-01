@@ -36,9 +36,9 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width; j++)
         {
             //calculates the values
-            auxred = round(0.393 * image[i][j].rgbtRed + 0.769 * image[i][j].rgbtGreen + 0.189 * image[i][j].rgbtBlue)
-            auxgreen = round(0.349 * image[i][j].rgbtRed + 0.686 * image[i][j].rgbtGreen + 0.168 * image[i][j].rgbtBlue)
-            auxblue = round(0.272 * image[i][j].rgbtRed + 0.534 * image[i][j].rgbtGreen + 0.131 * image[i][j].rgbtBlue)
+            auxred = round(0.393 * image[i][j].rgbtRed + 0.769 * image[i][j].rgbtGreen + 0.189 * image[i][j].rgbtBlue);
+            auxgreen = round(0.349 * image[i][j].rgbtRed + 0.686 * image[i][j].rgbtGreen + 0.168 * image[i][j].rgbtBlue);
+            auxblue = round(0.272 * image[i][j].rgbtRed + 0.534 * image[i][j].rgbtGreen + 0.131 * image[i][j].rgbtBlue);
 
             //corrects the values if they exceed 255
             if (auxblue > 255)
@@ -122,7 +122,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     //does first row, last row, first column and last column (except the corners)
 
     //top row
-    for(int i = 1; i < width - 1; i++)
+    for (int i = 1; i < width - 1; i++)
     {
         image[0][i] =
     }
