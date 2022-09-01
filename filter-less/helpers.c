@@ -1,4 +1,5 @@
 #include "helpers.h"
+#include "math.h"
 
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
@@ -127,12 +128,12 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         image[0][i] =
     }
     //bottom row
-    for(int i = 1; i < width - 1; i++)
+    for (int i = 1; i < width - 1; i++)
     {
         image[height - 2][i] =
     }
     //left row
-    for(int i = 1; i < height - 1; i++)
+    for (int i = 1; i < height - 1; i++)
     {
         image[i][0] =
     }
