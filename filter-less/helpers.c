@@ -159,7 +159,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     //right row
     for (int i = 1; i < height - 1; i++)
     {
-        image[i][width - 2] =
+        image[i][width - 2] = 
     }
 
     //does all the others that aren't the first/last row/column
