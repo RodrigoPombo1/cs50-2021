@@ -181,10 +181,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
     //does all the others that aren't the first/last row/column
     //each row
-    for (int i = 1; i < height - 1; i++)
+    for (int i = 1; i < height - 2; i++)
     {
         //each column
-        for (int j = 1; j < width - 1; j++)
+        for (int j = 1; j < width - 2; j++)
         {
         }
     }
