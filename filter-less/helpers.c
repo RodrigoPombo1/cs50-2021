@@ -97,7 +97,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 int getBlur(int i, int j, int height, int width, RGBTRIPLE image[height][width] , char* color)
 {
     float counter = 0;
-    int sum = 0;
+    int resulting_color = 0;
 
     //Cycles through the 2 rows surrounding the pixel and the row of the pixel itself
     for (int k = i - 1; k <  (i + 2); k++)
@@ -111,21 +111,21 @@ int getBlur(int i, int j, int height, int width, RGBTRIPLE image[height][width] 
             }
             if (color_position == 0)
             {
-                sum += image[k][l].rgbtRed;
+                resulting_color += image[k][l].rgbtRed;
             }
             else if (color_position == 1)
             {
-                sum += image[k][l].rgbtGreen;
+                resulting_color += image[k][l].rgbtGreen;
             }
             else
             {
-                sum += image[k][l].rgbtBlue;
+                resulting_color += image[k][l].rgbtBlue;
             }
             counter++;
 
         }
     }
-    return round(sum /counter);
+    return round(resulting_color /counter);
 }
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
