@@ -97,6 +97,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     return;
 }
 
+// Blur image
 int getBlur(int row, int column, int height, int width, RGBTRIPLE image[height][width], int color)
 {
     float counter = 0;
@@ -130,7 +131,7 @@ int getBlur(int row, int column, int height, int width, RGBTRIPLE image[height][
     }
     return round(resulting_color / counter);
 }
-// Blur image
+
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE image2[height][width];
