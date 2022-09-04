@@ -1,5 +1,8 @@
 #include "helpers.h"
 #include "math.h"
+#include "stdio.h"
+#include "string.h"
+
 
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
@@ -94,26 +97,26 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     return;
 }
 
-int getBlur(int i, int j, int height, int width, RGBTRIPLE image[height][width] , char* color)
+int getBlur(int row, int column, int height, int width, RGBTRIPLE image[height][width], char* color)
 {
     float counter = 0;
     int resulting_color = 0;
 
     //Cycles through the 2 rows surrounding the pixel and the row of the pixel itself
-    for (int k = i - 1; k <  (i + 2); k++)
+    for (int i = row - 1; i < (row + 2); i++)
     {
         //Cycles though the 2 columns surrounding the pixel and the column of the pixel itself
-        for (int l = j - 1; l < (j + 2); l ++)
+        for (int j = column - 1; j - 1 < (column + 2); j++)
         {
-            if(k < 0 || l < 0 || k >= height || l >= width)
+            if(i - 1 < 0 || j - 1 < 0 || i - 1 >= height || j - 1 >= width)
             {
                 continue;
             }
-            if (color_position == 0)
+            if (strcmp(color, Red))
             {
                 resulting_color += image[k][l].rgbtRed;
             }
-            else if (color_position == 1)
+            else if (strcmp(color, Green))
             {
                 resulting_color += image[k][l].rgbtGreen;
             }
@@ -125,7 +128,7 @@ int getBlur(int i, int j, int height, int width, RGBTRIPLE image[height][width] 
 
         }
     }
-    return round(resulting_color /counter);
+    return round(resulting_color / counter);
 }
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
@@ -144,9 +147,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            image[i][j].rgbtRed = getBlur(i, j, height, width, copy, 0);
-            image[i][j].rgbtGreen = getBlur(i, j, height, width, copy, 1);
-            image[i][j].rgbtBlue = getBlur(i, j, height, width, copy, 2);
+            image[i][j].rgbtRed = getBlur(i, j, height, width, image2, Red);
+            image[i][j].rgbtGreen = getBlur(i, j, height, width, image2, Green);
+            image[i][j].rgbtBlue = getBlur(i, j, height, width, image2, Blue);
         }
     }
     return;
