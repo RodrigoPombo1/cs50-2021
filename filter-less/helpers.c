@@ -97,7 +97,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     return;
 }
 
-int getBlur(int row, int column, int height, int width, RGBTRIPLE image[height][width], char* color)
+int getBlur(int row, int column, int height, int width, RGBTRIPLE image[height][width], int color)
 {
     float counter = 0;
     int resulting_color = 0;
@@ -106,23 +106,23 @@ int getBlur(int row, int column, int height, int width, RGBTRIPLE image[height][
     for (int i = row - 1; i < (row + 2); i++)
     {
         //Cycles though the 2 columns surrounding the pixel and the column of the pixel itself
-        for (int j = column - 1; j - 1 < (column + 2); j++)
+        for (int j = column - 1; j < (column + 2); j++)
         {
             if(i - 1 < 0 || j - 1 < 0 || i - 1 >= height || j - 1 >= width)
             {
                 continue;
             }
-            if (strcmp(color, "Red"))
+            if (color == 0)
             {
-                resulting_color += image[k][l].rgbtRed;
+                resulting_color += image[i][j].rgbtRed;
             }
-            else if (strcmp(color, "Green"))
+            else if (color == 1)
             {
-                resulting_color += image[k][l].rgbtGreen;
+                resulting_color += image[i][j].rgbtGreen;
             }
             else
             {
-                resulting_color += image[k][l].rgbtBlue;
+                resulting_color += image[i][j].rgbtBlue;
             }
             counter++;
 
@@ -147,9 +147,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            image[i][j].rgbtRed = getBlur(i, j, height, width, image2, "Red");
-            image[i][j].rgbtGreen = getBlur(i, j, height, width, image2, "Green");
-            image[i][j].rgbtBlue = getBlur(i, j, height, width, image2, "Blue");
+            image[i][j].rgbtRed = getBlur(i, j, height, width, image2, 0);
+            image[i][j].rgbtGreen = getBlur(i, j, height, width, image2, 1);
+            image[i][j].rgbtBlue = getBlur(i, j, height, width, image2, 2);
         }
     }
     return;
