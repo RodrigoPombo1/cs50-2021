@@ -112,11 +112,11 @@ int getBlur(int row, int column, int height, int width, RGBTRIPLE image[height][
             {
                 continue;
             }
-            if (strcmp(color, Red))
+            if (strcmp(color, "Red"))
             {
                 resulting_color += image[k][l].rgbtRed;
             }
-            else if (strcmp(color, Green))
+            else if (strcmp(color, "Green"))
             {
                 resulting_color += image[k][l].rgbtGreen;
             }
@@ -133,13 +133,13 @@ int getBlur(int row, int column, int height, int width, RGBTRIPLE image[height][
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
-    RGBTRIPLE copy[height][width];
+    RGBTRIPLE image2[height][width];
 
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
-            copy[i][j] = image[i][j];
+            image2[i][j] = image[i][j];
         }
     }
 
@@ -147,9 +147,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            image[i][j].rgbtRed = getBlur(i, j, height, width, image2, Red);
-            image[i][j].rgbtGreen = getBlur(i, j, height, width, image2, Green);
-            image[i][j].rgbtBlue = getBlur(i, j, height, width, image2, Blue);
+            image[i][j].rgbtRed = getBlur(i, j, height, width, image2, "Red");
+            image[i][j].rgbtGreen = getBlur(i, j, height, width, image2, "Green");
+            image[i][j].rgbtBlue = getBlur(i, j, height, width, image2, "Blue");
         }
     }
     return;
