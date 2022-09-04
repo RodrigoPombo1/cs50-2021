@@ -174,12 +174,12 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         image[i][0].rgbtRed = round((float)(image2[i - 1][0].rgbtRed + image2[i][0].rgbtRed
                                            + image2[i + 1][0].rgbtRed + image2[i - 1][0].rgbtRed
                                             + image2[i][0].rgbtRed + image2[i + 1][0].rgbtRed) / 6);
-        image[i][0].rgbtGreen = round((float)(image2[i - 1][0].rgbtRed + image2[i][0].rgbtRed
-                                           + image2[i + 1][0].rgbtRed + image2[i - 1][0].rgbtRed
-                                            + image2[i][0].rgbtRed + image2[i + 1][0].rgbtRed) / 6);
-        image[i][0].rgbtBlue = round((float)(image2[i - 1][0].rgbtRed + image2[i][0].rgbtRed
-                                           + image2[i + 1][0].rgbtRed + image2[i - 1][0].rgbtRed
-                                            + image2[i][0].rgbtRed + image2[i + 1][0].rgbtRed) / 6);
+        image[i][0].rgbtGreen = round((float)(image2[i - 1][0].rgbtGreen + image2[i][0].rgbtGreen
+                                           + image2[i + 1][0].rgbtGreen + image2[i - 1][0].rgbtGreen
+                                            + image2[i][0].rgbtGreen + image2[i + 1][0].rgbtGreen) / 6);
+        image[i][0].rgbtBlue = round((float)(image2[i - 1][0].rgbtBlue + image2[i][0].rgbtBlue
+                                           + image2[i + 1][0].rgbtBlue + image2[i - 1][0].rgbtBlue
+                                            + image2[i][0].rgbtBlue + image2[i + 1][0].rgbtBlue) / 6);
     }
     //right row
     for (int i = 1; i < height - 2; i++)
@@ -187,12 +187,12 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         image[i][width - 1].rgbtRed = round((float)(image2[i - 1][width - 1].rgbtRed + image2[i][width - 1].rgbtRed
                                            + image2[i + 1][width - 1].rgbtRed + image2[i - 1][width - 1].rgbtRed
                                             + image2[i][width - 1].rgbtRed + image2[i + 1][width - 1].rgbtRed) / 6);
-        image[i][width - 1].rgbtGreen = round((float)(image2[i - 1][width - 1].rgbtRed + image2[i][width - 1].rgbtRed
-                                           + image2[i + 1][width - 1].rgbtRed + image2[i - 1][width - 1].rgbtRed
-                                            + image2[i][width - 1].rgbtRed + image2[i + 1][width - 1].rgbtRed) / 6);
-        image[i][width - 1].rgbtBlue = round((float)(image2[i - 1][width - 1].rgbtRed + image2[i][width - 1].rgbtRed
-                                           + image2[i + 1][width - 1].rgbtRed + image2[i - 1][width - 1].rgbtRed
-                                            + image2[i][width - 1].rgbtRed + image2[i + 1][width - 1].rgbtRed) / 6);
+        image[i][width - 1].rgbtGreen = round((float)(image2[i - 1][width - 1].rgbtGreen + image2[i][width - 1].rgbtGreen
+                                           + image2[i + 1][width - 1].rgbtGreen + image2[i - 1][width - 1].rgbtGreen
+                                            + image2[i][width - 1].rgbtGreen + image2[i + 1][width - 1].rgbtGreen) / 6);
+        image[i][width - 1].rgbtBlue = round((float)(image2[i - 1][width - 1].rgbtBlue + image2[i][width - 1].rgbtBlue
+                                           + image2[i + 1][width - 1].rgbtBlue + image2[i - 1][width - 1].rgbtBlue
+                                            + image2[i][width - 1].rgbtBlue + image2[i + 1][width - 1].rgbtBlue) / 6);
     }
 
     //does all the others that aren't the first/last row/column
