@@ -122,3 +122,81 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     }
     return;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+int getBlur(int i, int j, int height, int width, RGBTRIPLE image[height][width] , int color_position)
+{
+    float counter = 0;
+    int sum = 0;
+
+    /** Start from 1 row before it and end at 1 row after it- total of 3rows */
+    for (int k = i - 1; k <  (i + 2); k++)
+    {
+        /** Start from 1 block before it and end at 1 block after it- total of 3blocks */
+        for (int l = j - 1; l < (j + 2); l ++)
+        {
+            if(k < 0 || l < 0 || k >= height || l >= width)
+            {
+                continue;
+            }
+            if (color_position == 0)
+            {
+                sum += image[k][l].rgbtRed;
+            }
+            else if (color_position == 1)
+            {
+                sum += image[k][l].rgbtGreen;
+            }
+            else
+            {
+                sum += image[k][l].rgbtBlue;
+            }
+            counter++;
+
+        }
+    }
+    return round(sum /counter);
+}
+// Blur image
+void blur(int height, int width, RGBTRIPLE image[height][width])
+{
+    RGBTRIPLE copy[height][width];
+
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            copy[i][j] = image[i][j];
+        }
+    }
+
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            image[i][j].rgbtRed = getBlur(i, j, height, width, copy, 0);
+            image[i][j].rgbtGreen = getBlur(i, j, height, width, copy, 1);
+            image[i][j].rgbtBlue = getBlur(i, j, height, width, copy, 2);
+        }
+    }
+    return;
+}
