@@ -109,7 +109,7 @@ int getBlur(int row, int column, int height, int width, RGBTRIPLE image[height][
         //Cycles though the 2 columns surrounding the pixel and the column of the pixel itself
         for (int j = column - 1; j < (column + 2); j++)
         {
-            if(i - 1 < 0 || j - 1 < 0 || i - 1 >= height || j - 1 >= width)
+            if(i < 0 || i >= height || j < 0 ||  j >= width)
             {
                 continue;
             }
