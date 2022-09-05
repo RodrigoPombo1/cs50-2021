@@ -10,5 +10,9 @@ int main(int argc, char *argv[])
             //If first JPEG
 
             //Else
-        //
+        //Else
+            //If already found JPEG
+
+            //Else
+    //Close any remaining files
 }
