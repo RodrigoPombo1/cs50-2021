@@ -4,7 +4,7 @@
 int main(int argc, char *argv[])
 {
     //Open memory card
-    FILE *f = fopen(card.raw, "r");
+    FILE *f = fopen(argv[1], "r");
     //Repeat until end of card
     while
         //Read 512 bytes into buffer
