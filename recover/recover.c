@@ -8,6 +8,7 @@ int main(int argc, char *argv[])
     //Repeat until end of card
     while
         //Read 512 bytes into buffer
+        fread(, f)
         //If start of new JPEG
             //If first JPEG
 
