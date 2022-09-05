@@ -2,16 +2,27 @@
 #include <stdlib.h>
 #include <stdint.h>
 
+typedef uint8_t BYTE;
+
 int main(int argc, char *argv[])
 {
+    //checks if the user used the program correctly
+    if (argc != 2)
+    {
+        return 1;
+    }
+
     int counter = 0;
-    typedef uint8_t BYTE;
     //Open memory card
     FILE *f = fopen(argv[1], "r");
     //Repeat until end of card
     BYTE buffer[512];
     int BLOCK_SIZE = 1;
     char *filename = "000";
+    if (fread(buffer, sizeof(BYTE)*512, BLOCK_SIZE, f) == 0)
+    {
+        return 2;
+    }
     while (fread(buffer, sizeof(BYTE)*512, BLOCK_SIZE, f) == BLOCK_SIZE)
     {
         //Read 512 bytes into buffer
