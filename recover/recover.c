@@ -28,6 +28,8 @@ int main(int argc, char *argv[])
             else
             {
                 //give file name
+                sprintf(filename, "%03i.jpg", counter);
+                FILE *img = fopen(filename,"w");
                 counter++;
             }
         }
