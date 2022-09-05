@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
             //If first JPEG
             if (counter == 0)
             {
-
+                
                 counter++;
             }
             //Else (not first JPEG)
