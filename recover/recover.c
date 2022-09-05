@@ -23,6 +23,7 @@ int main(int argc, char *argv[])
                 sprintf(filename, "%03i.jpg", counter);
                 FILE *img = fopen(filename,"w");
                 counter++;
+                fwrite(buffer[], 1, BLOCK_SIZE, filename);
             }
             //Else (not first JPEG)
             else
@@ -31,13 +32,17 @@ int main(int argc, char *argv[])
                 sprintf(filename, "%03i.jpg", counter);
                 FILE *img = fopen(filename,"w");
                 counter++;
+                fwrite(buffer[], 1, BLOCK_SIZE, filename);
             }
         }
         //Else
         else
         {
             //If already found JPEG
-
+            if (counter >= 1)
+            {
+                fwrite(buffer[], 1, BLOCK_SIZE, filename);
+            }
             //Else
         }
     }
