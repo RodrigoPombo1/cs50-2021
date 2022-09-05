@@ -6,7 +6,8 @@ int main(int argc, char *argv[])
     //Open memory card
     FILE *f = fopen(argv[1], "r");
     //Repeat until end of card
-    while
+    while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
+    {
         //Read 512 bytes into buffer
         fread(, f)
         //If start of new JPEG
@@ -17,5 +18,6 @@ int main(int argc, char *argv[])
             //If already found JPEG
 
             //Else
+    }
     //Close any remaining files
 }
