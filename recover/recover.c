@@ -26,6 +26,7 @@ int main(int argc, char *argv[])
                 FILE *img = fopen(filename,"w");
                 counter++;
                 fwrite(buffer, 512, BLOCK_SIZE, img);
+                fclose(filename);
             }
             //Else (not first JPEG)
             else
@@ -35,6 +36,7 @@ int main(int argc, char *argv[])
                 FILE *img = fopen(filename,"w");
                 counter++;
                 fwrite(buffer, 512, BLOCK_SIZE, img);
+                fclose(filename);
             }
         }
         //Else
@@ -45,9 +47,11 @@ int main(int argc, char *argv[])
             {
                 FILE *img = fopen(filename,"w");
                 fwrite(buffer, 512, BLOCK_SIZE, img);
+                fclose(filename);
             }
             //Else
         }
     }
     //Close any remaining files
+    fclose(argv[1]);
 }
