@@ -4,12 +4,13 @@
 int main(int argc, char *argv[])
 {
     int counter = 0;
+    typedef uint8_t BYTE;
     //Open memory card
     FILE *f = fopen(argv[1], "r");
     //Repeat until end of card
-    buffer[];
+    BYTE buffer[];
     int BLOCK_SIZE = 512;
-    while (fread(buffer[], 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
+    while (fread(buffer[], 1, BLOCK_SIZE, f) == BLOCK_SIZE)
     {
         //Read 512 bytes into buffer
         fread(, f)
