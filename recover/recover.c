@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
     BYTE buffer[512];
     int BLOCK_SIZE = 512;
     char *filename = "000";
-    while (fread(buffer, 1, BLOCK_SIZE, f) == BLOCK_SIZE)
+    while (fread(buffer, 8, BLOCK_SIZE, f) == BLOCK_SIZE)
     {
         //Read 512 bytes into buffer
         fread(buffer, 1, BLOCK_SIZE, f);
