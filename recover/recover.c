@@ -10,9 +10,9 @@ int main(int argc, char *argv[])
     FILE *f = fopen(argv[1], "r");
     //Repeat until end of card
     BYTE buffer[512];
-    int BLOCK_SIZE = 8;
+    int BLOCK_SIZE = 1;
     char *filename = "000";
-    while (fread(buffer, 512, BLOCK_SIZE, f) == BLOCK_SIZE)
+    while (fread(buffer, sizeof(BYTE)*512, BLOCK_SIZE, f) == BLOCK_SIZE)
     {
         //Read 512 bytes into buffer
         fread(buffer, 512, BLOCK_SIZE, f);
@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
                 sprintf(filename, "%03i.jpg", counter);
                 FILE *img = fopen(filename,"w");
                 counter++;
-                fwrite(buffer, 512, BLOCK_SIZE, img);
+                fwrite(buffer, sizeof(BYTE)*512, BLOCK_SIZE, img);
                 fclose(filename);
             }
             //Else (not first JPEG)
@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
                 sprintf(filename, "%03i.jpg", counter);
                 FILE *img = fopen(filename,"w");
                 counter++;
-                fwrite(buffer, 512, BLOCK_SIZE, img);
+                fwrite(buffer, sizeof(BYTE)*512, BLOCK_SIZE, img);
                 fclose(filename);
             }
         }
@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
             if (counter >= 1)
             {
                 FILE *img = fopen(filename,"w");
-                fwrite(buffer, 512, BLOCK_SIZE, img);
+                fwrite(buffer, sizeof(BYTE)*512, BLOCK_SIZE, img);
                 fclose(filename);
             }
             //Else
@@ -54,4 +54,5 @@ int main(int argc, char *argv[])
     }
     //Close any remaining files
     fclose(argv[1]);
+    return 0;
 }
