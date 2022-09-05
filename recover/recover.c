@@ -9,12 +9,12 @@ int main(int argc, char *argv[])
     //Open memory card
     FILE *f = fopen(argv[1], "r");
     //Repeat until end of card
-    BYTE buffer[];
+    BYTE buffer[512];
     int BLOCK_SIZE = 512;
-    while (fread(buffer[], 1, BLOCK_SIZE, f) == BLOCK_SIZE)
+    while (fread(buffer, 1, BLOCK_SIZE, f) == BLOCK_SIZE)
     {
         //Read 512 bytes into buffer
-        fread(buffer[], 1, BLOCK_SIZE, f)
+        fread(buffer, 1, BLOCK_SIZE, f);
         //If start of new JPEG
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
