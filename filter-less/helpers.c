@@ -108,22 +108,22 @@ int getBlur(int row, int column, int height, int width, RGBTRIPLE image[height][
         {
             if (i < 0 || i >= height || j < 0 ||  j >= width)
             {
-                continue;
             }
-            if (color == 0)
+            else if (color == 0)
             {
                 resulting_color += image[i][j].rgbtRed;
+                counter++;
             }
             else if (color == 1)
             {
                 resulting_color += image[i][j].rgbtGreen;
+                counter++;
             }
             else
             {
                 resulting_color += image[i][j].rgbtBlue;
+                counter++;
             }
-            counter++;
-
         }
     }
     return round(resulting_color / counter);
