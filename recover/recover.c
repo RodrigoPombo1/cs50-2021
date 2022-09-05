@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
     FILE *f = fopen(argv[1], "r");
     //Repeat until end of card
     BYTE buffer[512];
-    int BLOCK_SIZE = 1;
+    int BLOCK_SIZE = 8;
     char *filename = "000";
     while (fread(buffer, 512, BLOCK_SIZE, f) == BLOCK_SIZE)
     {
