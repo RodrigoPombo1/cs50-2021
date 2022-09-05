@@ -18,7 +18,8 @@ int main(int argc, char *argv[])
             //If first JPEG
             if (counter == 0)
             {
-                
+                sprintf(filename, "%03i.jpg", counter);
+                FILE *img = fopen(filename,"w");
                 counter++;
             }
             //Else (not first JPEG)
