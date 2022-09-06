@@ -3,6 +3,7 @@
 #include <stdint.h>
 
 typedef uint8_t BYTE;
+const int BLOCK_SIZE = 512;
 
 int main(int argc, char *argv[])
 {
@@ -21,7 +22,7 @@ int main(int argc, char *argv[])
     //array where to store the 512 bytes from the memory card
     BYTE buffer[512];
     char filename[8];
-    int BLOCK_SIZE = 512;
+
     //Open memory card
     FILE *f = fopen(argv[1], "r");
 
