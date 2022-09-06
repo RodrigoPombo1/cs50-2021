@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
         fread(buffer, sizeof(BYTE)*512, BLOCK_SIZE, f);
 
         //If start of new JPEG
-        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
+        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xd0) == 0xe0)
         {
             //If first JPEG
             if (counter == 0)
