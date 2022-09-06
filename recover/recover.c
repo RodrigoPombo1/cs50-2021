@@ -47,13 +47,13 @@ int main(int argc, char *argv[])
                 sprintf(filename, "%03i.jpg", counter);
                 img = fopen(filename,"w");
                 fwrite(buffer, sizeof(BYTE)*512, 1, img);
-                fclose(img);
 
                 counter++;
             }
             //Else (not first JPEG)
             else
             {
+                fclose(img);
                 //get the name of the file, open it, write and close it
                 sprintf(filename, "%03i.jpg", counter);
                 img = fopen(filename,"w");
@@ -69,14 +69,13 @@ int main(int argc, char *argv[])
             //If already found JPEG
             if (counter >= 1)
             {
-                img = fopen(filename,"w");
                 fwrite(buffer, sizeof(BYTE)*512, 1, img);
-                fclose(img);
             }
             //Else do nothing (continue)
         }
     }
     //Close any remaining files
+    fclose(img);
     fclose(f);
     return 0;
 }
