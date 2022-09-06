@@ -10,6 +10,7 @@ int main(int argc, char *argv[])
     //checks if the user used the program correctly
     if (argc != 2)
     {
+        printf("Usage: ./recover IMAGE")
         return 1;
     }
 
