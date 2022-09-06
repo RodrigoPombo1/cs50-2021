@@ -10,8 +10,17 @@ int main(int argc, char *argv[])
     //checks if the user used the program correctly
     if (argc != 2)
     {
-        printf("Usage: ./recover IMAGE")
+        printf("Usage: ./recover IMAGE");
         return 1;
+    }
+
+    //Open memory card
+    FILE *f = fopen(argv[1], "r");
+
+    //checks if the memory card as any data to begin with
+    if (fread(buffer, sizeof(BYTE), BLOCK_SIZE, f) == 0)
+    {
+        return 2;
     }
 
     //counts amount of jpeg files found
@@ -23,15 +32,6 @@ int main(int argc, char *argv[])
     //array where to store the 512 bytes from the memory card
     BYTE buffer[BLOCK_SIZE];
     char filename[8];
-
-    //Open memory card
-    FILE *f = fopen(argv[1], "r");
-
-    //checks if the memory card as any data to begin with
-    if (fread(buffer, sizeof(BYTE), BLOCK_SIZE, f) == 0)
-    {
-        return 2;
-    }
 
     //Repeat until end of card
     while (fread(buffer, sizeof(BYTE), BLOCK_SIZE, f) == BLOCK_SIZE)
