@@ -15,6 +15,9 @@ int main(int argc, char *argv[])
     //counts amount of jpeg files found
     int counter = 0;
 
+    //creates empty image file
+    FILE *img = NULL;
+
     //array where to store the 512 bytes from the memory card
     BYTE buffer[512];
     int BLOCK_SIZE = 1;
