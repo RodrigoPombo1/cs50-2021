@@ -12,42 +12,53 @@ int main(int argc, char *argv[])
         return 1;
     }
 
+    //counts amount of jpeg files found
     int counter = 0;
-    //Open memory card
-    FILE *f = fopen(argv[1], "r");
-    //Repeat until end of card
+
+    //array where to store the 512 bytes from the memory card
     BYTE buffer[512];
     int BLOCK_SIZE = 1;
-    char *filename = "000";
+    char filename[8];
+
+    //Open memory card
+    FILE *f = fopen(argv[1], "r");
+
+    //checks if the memory card as any data to begin with
     if (fread(buffer, sizeof(BYTE)*512, BLOCK_SIZE, f) == 0)
     {
         return 2;
     }
+
+    //Repeat until end of card
     while (fread(buffer, sizeof(BYTE)*512, BLOCK_SIZE, f) == BLOCK_SIZE)
     {
         //Read 512 bytes into buffer
-        fread(buffer, 512, BLOCK_SIZE, f);
+        fread(buffer, sizeof(BYTE)*512, BLOCK_SIZE, f);
+
         //If start of new JPEG
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
             //If first JPEG
             if (counter == 0)
             {
+                //get the name of the file, open it, write and close it
                 sprintf(filename, "%03i.jpg", counter);
                 FILE *img = fopen(filename,"w");
-                counter++;
                 fwrite(buffer, sizeof(BYTE)*512, BLOCK_SIZE, img);
-                fclose(filename);
+                fclose(img);
+
+                counter++;
             }
             //Else (not first JPEG)
             else
             {
-                //give file name
+                //get the name of the file, open it, write and close it
                 sprintf(filename, "%03i.jpg", counter);
                 FILE *img = fopen(filename,"w");
-                counter++;
                 fwrite(buffer, sizeof(BYTE)*512, BLOCK_SIZE, img);
-                fclose(filename);
+                fclose(img);
+
+                counter++;
             }
         }
         //Else
@@ -58,12 +69,12 @@ int main(int argc, char *argv[])
             {
                 FILE *img = fopen(filename,"w");
                 fwrite(buffer, sizeof(BYTE)*512, BLOCK_SIZE, img);
-                fclose(filename);
+                fclose(img);
             }
-            //Else
+            //Else do nothing (continue)
         }
     }
     //Close any remaining files
-    fclose(argv[1]);
+    fclose(f);
     return 0;
 }
