@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 
     //array where to store the 512 bytes from the memory card
     BYTE buffer[512];
-    char filename[10];
+    char filename[8];
 
     //Open memory card
     FILE *f = fopen(argv[1], "r");
@@ -58,7 +58,6 @@ int main(int argc, char *argv[])
                 sprintf(filename, "%03i.jpg", counter);
                 img = fopen(filename,"w");
                 fwrite(buffer, sizeof(BYTE)*512, 1, img);
-                fclose(img);
 
                 counter++;
             }
