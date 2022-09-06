@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
     }
 
     //Repeat until end of card
-    while (fread(buffer, sizeof(BYTE), BLOCK_SIZE, f) == 1)
+    while (fread(buffer, sizeof(BYTE), BLOCK_SIZE, f) == BLOCK_SIZE)
     {
         //Read 512 bytes into buffer, stores the next 512 bytes into a variable we can work with
         fread(buffer, sizeof(BYTE), BLOCK_SIZE, f);
