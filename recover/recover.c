@@ -13,6 +13,9 @@ int main(int argc, char *argv[])
         printf("Usage: ./recover IMAGE");
         return 1;
     }
+    
+    //array where to store the 512 bytes from the memory card
+    BYTE buffer[BLOCK_SIZE];
 
     //Open memory card
     FILE *f = fopen(argv[1], "r");
@@ -29,8 +32,6 @@ int main(int argc, char *argv[])
     //creates empty image file
     FILE *img = NULL;
 
-    //array where to store the 512 bytes from the memory card
-    BYTE buffer[BLOCK_SIZE];
     char filename[8];
 
     //Repeat until end of card
