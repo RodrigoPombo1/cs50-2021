@@ -20,23 +20,22 @@ int main(int argc, char *argv[])
 
     //array where to store the 512 bytes from the memory card
     BYTE buffer[512];
-    int BLOCK_SIZE = 1;
     char filename[8];
 
     //Open memory card
     FILE *f = fopen(argv[1], "r");
 
     //checks if the memory card as any data to begin with
-    if (fread(buffer, sizeof(BYTE)*512, BLOCK_SIZE, f) == 0)
+    if (fread(buffer, sizeof(BYTE)*512, 1, f) == 0)
     {
         return 2;
     }
 
     //Repeat until end of card
-    while (fread(buffer, sizeof(BYTE)*512, BLOCK_SIZE, f) == BLOCK_SIZE)
+    while (fread(buffer, sizeof(BYTE)*512, 1, f) == 1)
     {
         //Read 512 bytes into buffer
-        fread(buffer, sizeof(BYTE)*512, BLOCK_SIZE, f);
+        fread(buffer, sizeof(BYTE)*512, 1, f);
 
         //If start of new JPEG
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
@@ -46,8 +45,8 @@ int main(int argc, char *argv[])
             {
                 //get the name of the file, open it, write and close it
                 sprintf(filename, "%03i.jpg", counter);
-                FILE *img = fopen(filename,"w");
-                fwrite(buffer, sizeof(BYTE)*512, BLOCK_SIZE, img);
+                img = fopen(filename,"w");
+                fwrite(buffer, sizeof(BYTE)*512, 1, img);
                 fclose(img);
 
                 counter++;
@@ -57,8 +56,8 @@ int main(int argc, char *argv[])
             {
                 //get the name of the file, open it, write and close it
                 sprintf(filename, "%03i.jpg", counter);
-                FILE *img = fopen(filename,"w");
-                fwrite(buffer, sizeof(BYTE)*512, BLOCK_SIZE, img);
+                img = fopen(filename,"w");
+                fwrite(buffer, sizeof(BYTE)*512, 1, img);
                 fclose(img);
 
                 counter++;
@@ -70,8 +69,8 @@ int main(int argc, char *argv[])
             //If already found JPEG
             if (counter >= 1)
             {
-                FILE *img = fopen(filename,"w");
-                fwrite(buffer, sizeof(BYTE)*512, BLOCK_SIZE, img);
+                img = fopen(filename,"w");
+                fwrite(buffer, sizeof(BYTE)*512, 1, img);
                 fclose(img);
             }
             //Else do nothing (continue)
