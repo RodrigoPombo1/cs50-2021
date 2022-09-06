@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
     FILE *img = NULL;
 
     //array where to store the 512 bytes from the memory card
-    BYTE buffer[512];
+    BYTE buffer[BLOCK_SIZE];
     char filename[8];
 
     //Open memory card
