@@ -20,8 +20,10 @@ int main(int argc, char *argv[])
     //checks if the memory card as any data to begin with
     if (f == NULL)
     {
-        return 2;
+        printf("Failed to open file");
+        return 1;
     }
+
     //array where to store the 512 bytes from the memory card
     BYTE buffer[BLOCK_SIZE];
 
@@ -36,9 +38,6 @@ int main(int argc, char *argv[])
     //Repeat until end of card
     while (fread(buffer, sizeof(BYTE), BLOCK_SIZE, f) == BLOCK_SIZE)
     {
-        //Read 512 bytes into buffer, stores the next 512 bytes into a variable we can work with
-        fread(buffer, sizeof(BYTE), BLOCK_SIZE, f);
-
         //checks if the next chunk of memory is the start of new JPEG
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
