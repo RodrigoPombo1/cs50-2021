@@ -21,21 +21,21 @@ int main(int argc, char *argv[])
     //array where to store the 512 bytes from the memory card
     BYTE buffer[512];
     char filename[8];
-
+    int BLOCK_SIZE = 512;
     //Open memory card
     FILE *f = fopen(argv[1], "r");
 
     //checks if the memory card as any data to begin with
-    if (fread(buffer, sizeof(BYTE)*512, 1, f) == 0)
+    if (fread(buffer, sizeof(BYTE), BLOCK_SIZE, f) == 0)
     {
         return 2;
     }
 
     //Repeat until end of card
-    while (fread(buffer, sizeof(BYTE)*512, 1, f) == 1)
+    while (fread(buffer, sizeof(BYTE), BLOCK_SIZE, f) == 1)
     {
         //Read 512 bytes into buffer, stores the next 512 bytes into a variable we can work with
-        fread(buffer, sizeof(BYTE)*512, 1, f);
+        fread(buffer, sizeof(BYTE), BLOCK_SIZE, f);
 
         //checks if the next chunk of memory is the start of new JPEG
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
                 //get the name of the file, open it, write and close it (start first image)
                 sprintf(filename, "%03i.jpg", counter);
                 img = fopen(filename,"w");
-                fwrite(buffer, sizeof(BYTE)*512, 1, img);
+                fwrite(buffer, sizeof(BYTE), BLOCK_SIZE, img);
 
                 counter++;
             }
@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
                 //get the name of the file, open it and write (start new image)
                 sprintf(filename, "%03i.jpg", counter);
                 img = fopen(filename,"w");
-                fwrite(buffer, sizeof(BYTE)*512, 1, img);
+                fwrite(buffer, sizeof(BYTE), BLOCK_SIZE, img);
 
                 counter++;
             }
@@ -67,7 +67,7 @@ int main(int argc, char *argv[])
         //if already found at least 1 JPEG previously, continue writing the data
         else if (counter >= 1)
         {
-            fwrite(buffer, sizeof(BYTE)*512, 1, img);
+            fwrite(buffer, sizeof(BYTE), BLOCK_SIZE, img);
         }
     }
     //Close any remaining files
