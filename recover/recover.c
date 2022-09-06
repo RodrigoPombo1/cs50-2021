@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
             {
                 //get the name of the file, open it, write and close it (start first image)
                 sprintf(filename, "%03i.jpg", counter);
-                img = fopen(filename,"w");
+                img = fopen(filename, "w");
                 fwrite(buffer, sizeof(BYTE), BLOCK_SIZE, img);
 
                 counter++;
@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
 
                 //get the name of the file, open it and write (start new image)
                 sprintf(filename, "%03i.jpg", counter);
-                img = fopen(filename,"w");
+                img = fopen(filename, "w");
                 fwrite(buffer, sizeof(BYTE), BLOCK_SIZE, img);
 
                 counter++;
