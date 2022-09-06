@@ -34,16 +34,16 @@ int main(int argc, char *argv[])
     //Repeat until end of card
     while (fread(buffer, sizeof(BYTE)*512, 1, f) == 1)
     {
-        //Read 512 bytes into buffer
+        //Read 512 bytes into buffer, stores the next 512 bytes into a variable we can work with
         fread(buffer, sizeof(BYTE)*512, 1, f);
 
-        //If start of new JPEG
+        //checks if the next chunk of memory is the start of new JPEG
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
             //If first JPEG
             if (counter == 0)
             {
-                //get the name of the file, open it, write and close it
+                //get the name of the file, open it, write and close it (start first image)
                 sprintf(filename, "%03i.jpg", counter);
                 img = fopen(filename,"w");
                 fwrite(buffer, sizeof(BYTE)*512, 1, img);
@@ -53,8 +53,10 @@ int main(int argc, char *argv[])
             //Else (not first JPEG)
             else
             {
+                //close the previous image (completed)
                 fclose(img);
-                //get the name of the file, open it, write and close it
+
+                //get the name of the file, open it and write (start new image)
                 sprintf(filename, "%03i.jpg", counter);
                 img = fopen(filename,"w");
                 fwrite(buffer, sizeof(BYTE)*512, 1, img);
@@ -62,15 +64,10 @@ int main(int argc, char *argv[])
                 counter++;
             }
         }
-        //Else
-        else
+        //if already found at least 1 JPEG previously, continue writing the data
+        else if (counter >= 1)
         {
-            //If already found JPEG
-            if (counter >= 1)
-            {
-                fwrite(buffer, sizeof(BYTE)*512, 1, img);
-            }
-            //Else do nothing (continue)
+            fwrite(buffer, sizeof(BYTE)*512, 1, img);
         }
     }
     //Close any remaining files
