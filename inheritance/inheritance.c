@@ -77,7 +77,7 @@ void free_family(person *p)
         // go from family member to the previous family member until the pointer to its parents is null
             // free the family member
     }
-    // TODO: Free child
+    // TODO: Free child (the latest generation)
 }
 
 // Print each family member and their alleles.
