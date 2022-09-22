@@ -78,13 +78,11 @@ void free_family(person *p)
     {
         return;
     }
-    while (p != NULL)
-    {
     // TODO: Free parents recursively (for generations)
-        // go from family member to the previous family member until the pointer to its parents is null
-            // free the family member
-    }
+    free_family(p->parent[0]);
+    free_family(p->parent[1]);
     // TODO: Free child (the latest generation)
+    free(p);
 }
 
 // Print each family member and their alleles.
