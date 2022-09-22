@@ -73,12 +73,12 @@ person *create_family(int generations)
 // Free `p` and all ancestors of `p`.
 void free_family(person *p)
 {
-    // TODO: Handle base case (where the family has only 1 generation)
-    if (generations = 1)
+    // TODO: Handle base case
+    if (p = NULL)
     {
-        free(*p);
+        return;
     }
-    while(p->parent[0] != NULL)
+    while (p != NULL)
     {
     // TODO: Free parents recursively (for generations)
         // go from family member to the previous family member until the pointer to its parents is null
