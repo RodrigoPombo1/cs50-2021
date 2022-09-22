@@ -58,8 +58,8 @@ person *create_family(int generations)
     else
     {
         // TODO: Set parent pointers to NULL
-        p->parent[0] = create_family(generations - 1);
-        p->parent[1] =
+        p->parent[0] = NULL;
+        p->parent[1] = NULL;
         // TODO: Randomly assign alleles
         p->alleles[0] = random_allele();
         p->alleles[1] = random_allele();
@@ -67,14 +67,18 @@ person *create_family(int generations)
     }
 
     // TODO: Return newly created person
-    return NULL;
+    return p;
 }
 
 // Free `p` and all ancestors of `p`.
 void free_family(person *p)
 {
     // TODO: Handle base case (where the family has only 1 generation)
-    if (generations != 1)
+    if (generations = 1)
+    {
+        free();
+    }
+    while(p->parent[0] != NULL)
     {
     // TODO: Free parents recursively (for generations)
         // go from family member to the previous family member until the pointer to its parents is null
