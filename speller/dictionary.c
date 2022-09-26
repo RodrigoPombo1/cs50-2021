@@ -2,9 +2,9 @@
 
 #include <ctype.h>
 #include <stdbool.h>
-#include
-#include
-#include
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 
 #include "dictionary.h"
@@ -27,7 +27,7 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
-    node *cursor = table[hash(word)]
+    node *cursor = table[hash(word)];
     do
     {
 
@@ -37,7 +37,7 @@ bool check(const char *word)
         }
         cursor = cursor->next;
     }
-    while (cursor->next != NULL)
+    while (cursor->next != NULL);
     return false;
 }
 
@@ -62,7 +62,7 @@ bool load(const char *dictionary)
 
     char word[LENGTH + 1];
 
-    while (fscanf(file, "%s", word) != EOF) //while the file isn't over AND also registers the word
+    while (fscanf(f, "%s", word) != EOF) //while the file isn't over AND also registers the word
     {
         node *n = malloc(sizeof(node));
         if (n == NULL)
@@ -75,7 +75,7 @@ bool load(const char *dictionary)
         n->next = table[hash(word)];
         table[hash(word)] = n;
     }
-    flose(f);
+    fclose(f);
     return true;
 }
 
@@ -90,7 +90,7 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
-    FILE *f = fopen(dictionary, "r")
+    FILE *f = fopen(dictionary, "r");
     node *cursor;
     node *tmp;
     for (int i = 0; i < 26; i++)
