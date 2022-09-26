@@ -50,8 +50,13 @@ bool load(const char *dictionary)
     while (fscanf(file, "%s", word) != EOF) //while the file isn't over AND also registers the word
     {
         node *n = malloc(sizeof(node));
+        if (n == NULL)
+        {
+            return false;
+        }
         strcpy(n->word, word);
         number_of_words++;
+
         n->next = table[hash(word)]->next;
 
         table[hash(word)]->next =
