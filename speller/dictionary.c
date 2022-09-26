@@ -31,7 +31,6 @@ bool check(const char *word)
     node *cursor = table[hash(word)];
     do
     {
-
         if (strcasecmp(word, cursor->word) == 0)
         {
             return true;
