@@ -23,6 +23,15 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
+    index = hash(word)
+    do
+    {
+        if (strcasecmp(word, n->word))
+        {
+            return true;
+        }
+    }
+    while (n->)
     return false;
 }
 
