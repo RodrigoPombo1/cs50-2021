@@ -23,15 +23,17 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
-    index = hash(word)
+    node *cursor = table[hash(word)]
     do
     {
-        if (strcasecmp(word, n->word))
+
+        if (strcasecmp(word, cursor->word) == 0)
         {
             return true;
         }
+        cursor = cursor->next;
     }
-    while (n->)
+    while (cursor->next != NULL)
     return false;
 }
 
