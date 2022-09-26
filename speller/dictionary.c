@@ -53,10 +53,8 @@ bool load(const char *dictionary)
         strcpy(n->word, word);
         number_of_words++;
         n->next = NULL;
-        if (n == NULL)
-        {
-            return false;
-        }
+        
+        table[hash(word)]
     }
 }
 
