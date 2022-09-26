@@ -89,17 +89,16 @@ bool unload(void)
     FILE *f = fopen(dictionary, "r")
     node *cursor;
     node *tmp;
-    for (int i = 0, i < 26, i++)
+    for (int i = 0; i < 26; i++)
     {
         cursor = table[i];
-        do
+        while (cursor != NULL)
         {
-            tmp =
-            free(cursor)
+            tmp = cursor;
+            cursor = cursor->next;
+            free(tmp);
         }
-        while (cursor->next != NULL)
     }
-
     fclose(f);
-    return false;
+    return true;
 }
