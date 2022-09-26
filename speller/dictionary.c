@@ -86,5 +86,10 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
+    FILE *f = fopen(dictionary, "r")
+    if (f == NULL)
+    {
+        return true;
+    }
     return false;
 }
