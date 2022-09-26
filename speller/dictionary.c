@@ -87,9 +87,7 @@ bool unload(void)
 {
     // TODO
     FILE *f = fopen(dictionary, "r")
-    if (f == NULL)
-    {
-        return true;
-    }
+    node *cursor = table[0]
+
     return false;
 }
