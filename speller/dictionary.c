@@ -49,11 +49,12 @@ unsigned int hash(const char *word)
     return toupper(word[0]) - 'A';
 }
 
+
+int number_of_words = 0;
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
     // TODO
-    int number_of_words = 0;
     FILE *f = fopen(dictionary, "r");
 
     if (f == NULL)
