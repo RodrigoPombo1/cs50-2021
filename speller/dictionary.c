@@ -37,7 +37,7 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // TODO
-    malloc(sizeof(node));
+    node *n = malloc(sizeof(node));
     return false;
 }
 
