@@ -44,7 +44,7 @@ bool load(const char *dictionary)
         node *n = malloc(sizeof(node));
         strcpy(n->word, );
         number_of_words++;
-        n->next = null;
+        n->next = NULL;
         if (n == NULL)
         {
             return false;
