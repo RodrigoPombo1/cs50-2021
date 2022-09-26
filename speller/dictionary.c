@@ -91,7 +91,12 @@ bool unload(void)
     for (int i = 0, i < 26, i++)
     {
         cursor = table[i];
-        
+        do
+        {
+            tmp =
+            free(cursor)
+        }
+        while (cursor->next != NULL)
     }
 
     fclose(f);
