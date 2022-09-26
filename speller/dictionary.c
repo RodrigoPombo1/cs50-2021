@@ -53,7 +53,7 @@ bool load(const char *dictionary)
 {
     // TODO
     int number_of_words = 0;
-    FILE *f = fopen(dictionary, "r")
+    FILE *f = fopen(dictionary, "r");
 
     if (f == NULL)
     {
