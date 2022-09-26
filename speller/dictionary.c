@@ -37,7 +37,7 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // TODO
-    //make a hash table with the first 3 letters, make a tree? I don't think we are supposed to make a three, making a three with the first 3 letters would be the most efficient
+    malloc(sizeof(node));
     return false;
 }
 
