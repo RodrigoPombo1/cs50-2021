@@ -57,10 +57,11 @@ bool load(const char *dictionary)
         strcpy(n->word, word);
         number_of_words++;
 
-        n->next = table[hash(word)]->next;
-
-        table[hash(word)]->next =
+        n->next = table[hash(word)];
+        table[hash(word)] = n;
     }
+    flose(f);
+    return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
