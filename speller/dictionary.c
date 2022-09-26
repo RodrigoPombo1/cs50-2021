@@ -47,7 +47,7 @@ bool load(const char *dictionary)
 
     char word[LENGTH + 1];
 
-    while (fscanf(file, "%s", word) != EOF) //while the file isn't over
+    while (fscanf(file, "%s", word) != EOF) //while the file isn't over AND also registers the word
     {
         node *n = malloc(sizeof(node));
         strcpy(n->word, word);
