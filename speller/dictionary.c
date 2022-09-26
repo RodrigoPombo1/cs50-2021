@@ -29,16 +29,8 @@ bool check(const char *word)
 {
     // TODO
     node *cursor = table[hash(word)];
-//    do
-//    {
-//        if (strcasecmp(word, cursor->word) == 0)
-//        {
-  //          return true;
-    //    }
-      //  cursor = cursor->next;
-    //}
-    //while (cursor->next != NULL);
-    while (cursor != 0)
+
+    while (cursor != NULL)
     {
         if (strcasecmp(word, cursor->word) == 0)
         {
