@@ -52,9 +52,9 @@ bool load(const char *dictionary)
         node *n = malloc(sizeof(node));
         strcpy(n->word, word);
         number_of_words++;
-        n->next = NULL;
-        
-        table[hash(word)]
+        n->next = table[hash(word)]->next;
+
+        table[hash(word)]->next =
     }
 }
 
