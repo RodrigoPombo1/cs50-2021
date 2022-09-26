@@ -87,9 +87,10 @@ bool unload(void)
 {
     // TODO
     FILE *f = fopen(dictionary, "r")
-    node *cursor = table[0]
+    node *cursor;
     for (int i = 0, i < 26, i++)
     {
+        cursor = table[i];
         
     }
 
