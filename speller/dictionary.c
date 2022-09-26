@@ -37,8 +37,11 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // TODO
+    int number_of_words = 0;
+
     node *n = malloc(sizeof(node));
     strcpy(n->word, );
+    number_of_words++;
     n->next = null;
     return false;
 }
@@ -47,11 +50,7 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
-    if (0 < word_count)
-    {
-        return word_count;
-    }
-    return 0;
+    return number_of_words;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
