@@ -90,7 +90,6 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
-    FILE *f = fopen(dictionary, "r");
     node *cursor;
     node *tmp;
     for (int i = 0; i < 26; i++)
@@ -103,6 +102,5 @@ bool unload(void)
             free(tmp);
         }
     }
-    fclose(f);
     return true;
 }
