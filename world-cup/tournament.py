@@ -15,9 +15,9 @@ def main():
         sys.exit("Usage: python tournament.py FILENAME")
 
     teams = []
-    # TODO: Read teams into memory from file
+    # TODO: Read teams into memory from file, each team has it's own dictionary with it's own rating
 
-    counts = {}
+    counts = {} #keep track of the amount of times the team has won
     # TODO: Simulate N tournaments and keep track of win counts
 
     # Print each team's chances of winning, according to simulation
@@ -47,7 +47,7 @@ def simulate_round(teams):
     return winners
 
 
-def simulate_tournament(teams):
+def simulate_tournament(teams): #returns the winner of an entire tournament
     """Simulate a tournament. Return name of winning team."""
     # TODO
 
