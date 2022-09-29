@@ -72,5 +72,6 @@ def simulate_tournament(teams): #returns the winner of an entire tournament
     #there will be only one team left in the list
     return teams[0]["team"]
 
+
 if __name__ == "__main__":
     main()
