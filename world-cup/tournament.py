@@ -24,12 +24,14 @@ def main():
         teams.append(team)
     print(teams)
 
-    counts = {} #keep track of the amount of times the team has won
+    counts = {} #keeps track of the amount of times the team has won
     # TODO: Simulate N tournaments and keep track of win counts
-    for team in teams:
-        counts["team"] = team["team"]
-        counts["score"] = 0
-    print(counts)
+    for i in range(N):
+        team_that_won = simulate_tournament(teams)
+        if team_that_won in counts: #if the team was already previously added to the dictionnary (if it had already won at least once)
+            counts[team_that_won] += 1
+        else:n #if it's the first time that team is winning
+            counts[team_that_won] = 1
 
 
     # Print each team's chances of winning, according to simulation
