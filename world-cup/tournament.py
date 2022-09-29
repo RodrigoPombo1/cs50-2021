@@ -32,6 +32,7 @@ def main():
             counts[team_that_won] += 1
         else:n #if it's the first time that team is winning
             counts[team_that_won] = 1
+    print(counts)
 
 
     # Print each team's chances of winning, according to simulation
