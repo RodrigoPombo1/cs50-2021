@@ -24,16 +24,16 @@ def main():
         teams.append(team)
     print(teams)
 
-    counts = {} #keeps track of the amount of times the team has won
+    counts = {}  # keeps track of the amount of times the team has won
     # TODO: Simulate N tournaments and keep track of win counts
     for i in range(N):
         team_that_won = simulate_tournament(teams)
-        if team_that_won in counts: #if the team was already previously added to the dictionnary (if it had already won at least once)
+        # if the team was already previously added to the dictionnary (if it had already won at least once)
+        if team_that_won in counts:
             counts[team_that_won] += 1
-        else: #if it's the first time that team is winning
+        else:  # if it's the first time that team is winning
             counts[team_that_won] = 1
     print(counts)
-
 
     # Print each team's chances of winning, according to simulation
     for team in sorted(counts, key=lambda team: counts[team], reverse=True):
@@ -58,18 +58,17 @@ def simulate_round(teams):
             winners.append(teams[i])
         else:
             winners.append(teams[i + 1])
-
     return winners
 
 
-def simulate_tournament(teams): #returns the winner of an entire tournament
+def simulate_tournament(teams):  # returns the winner of an entire tournament
     """Simulate a tournament. Return name of winning team."""
     # TODO
-    #while there isn't a single team
+    # while there isn't a single team
     while len(teams) > 1:
-        #keep sending them to the simulate_round function, that will gradually eliminate teams and registar that as the new list of teams
+        # keep sending them to the simulate_round function, that will gradually eliminate teams and registar that as the new list of teams
         teams = simulate_round(teams)
-    #there will be only one team left in the list
+    # there will be only one team left in the list
     return teams[0]["team"]
 
 
