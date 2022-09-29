@@ -30,7 +30,7 @@ def main():
         team_that_won = simulate_tournament(teams)
         if team_that_won in counts: #if the team was already previously added to the dictionnary (if it had already won at least once)
             counts[team_that_won] += 1
-        else:n #if it's the first time that team is winning
+        else: #if it's the first time that team is winning
             counts[team_that_won] = 1
     print(counts)
 
