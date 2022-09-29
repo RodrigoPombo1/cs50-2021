@@ -27,9 +27,8 @@ def main():
     counts = {} #keep track of the amount of times the team has won
     # TODO: Simulate N tournaments and keep track of win counts
     for team in teams:
-        team_name = team["team"]
-        team_name["team"] = team_name
-        team_name["score"] = 0
+        counts["team"] = team["team"]
+        counts["score"] = 0
     print(counts)
 
 
