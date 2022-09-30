@@ -1,7 +1,7 @@
 from cs50 import get_string
 from math import *
 
-text =  get_string("Text: ")
+text = get_string("Text: ")
 length = len(text)
 letter = 0
 word = 1
