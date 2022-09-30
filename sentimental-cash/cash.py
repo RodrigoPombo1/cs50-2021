@@ -6,15 +6,16 @@ while True:
         print("Must be a positive number")
     except:
         print("You must input a decimal number")
-
+# need to convert so that we only have integers, in order to avoid floating point imprecisions
+cash = cash * 100
 # calculates quarters
-quarters = cash // 0.25
-cash = cash % 0.25
+quarters = cash // 25
+cash = cash % 25
 # calculates dimes
-dimes = cash // 0.1
-cash = cash - (cash // 0.1) * 0.1
+dimes = cash // 10
+cash = cash % 10
 # calculates nickels
-nickels = cash // 0.05
-cash = cash % 0.05
+nickels = cash // 5
+cash = cash % 5
 
-print(quarters + dimes + nickels + cash // 0.01)
+print(quarters + dimes + nickels + cash // 1)
