@@ -14,7 +14,7 @@ for i in range(length):
         sentence += 1
     else:
         letter += 1
-grade = round(0.0588 * letter / word * 100 - 0.296 * sentence / word * 100 - 15.8)
+grade = round(0.0588 * float(letter) / float(word) * 100 - 0.296 * float(sentence) / float(word) * 100 - 15.8)
 
 if 1 < grade < 16:
     print(f"Grade {grade}")
