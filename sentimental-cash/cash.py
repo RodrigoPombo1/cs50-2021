@@ -9,12 +9,12 @@ while True:
 
 # calculates quarters
 quarters = cash // 0.25
-cash = cash - 0.25 * quarters
+cash = cash % 0.25
 # calculates dimes
 dimes = cash // 0.1
-cash = cash - 0.1 * dimes
+cash = cash % 0.1
 # calculates nickels
 nickels = cash // 0.05
-cash = cash - 0.5 * dimes
+cash = cash % 0.05
 
 print(quarters + dimes + nickels + cash // 0.1)
