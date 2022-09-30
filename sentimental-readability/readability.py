@@ -8,9 +8,8 @@ word = 0
 sentence = 0
 for i in range(length):
     char = text[i]
-    if isalpha(char):
+    if char.isalpha():
         letter += 1
-        print(char)
     elif char == ' ':
         word += 1
     elif char == '!' or char == '?' or char == '.':
