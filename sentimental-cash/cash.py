@@ -17,4 +17,4 @@ cash = cash - 0.1 * dimes
 nickels = cash % 0.05
 cash = cash - 0.5 * dimes
 
-print(quarters + dimes + nickels + cash)
+print(quarters + dimes + nickels + cash % 0.1)
