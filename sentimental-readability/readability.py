@@ -4,7 +4,7 @@ from math import *
 text =  get_string("Text: ")
 length = len(text)
 letter = 0
-word = 0
+word = 1
 sentence = 0
 for i in range(length):
     char = text[i]
