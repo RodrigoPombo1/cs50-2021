@@ -12,7 +12,7 @@ quarters = cash // 0.25
 cash = cash % 0.25
 # calculates dimes
 dimes = cash // 0.1
-cash = cash % 0.1
+cash = cash - (cash // 0.1) * 0.1
 # calculates nickels
 nickels = cash // 0.05
 cash = cash % 0.05
