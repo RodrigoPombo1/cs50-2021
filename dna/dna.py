@@ -22,8 +22,9 @@ def main():
         print("o programa correu")
         print(key)
         if key != "name":
+            print("esta parte correu1")
             for sequence1 in sequence:
-                print("esta parte correu")
+                print("esta parte correu2")
                 longest_matching.append(longest_match(sequence1[0], key))
     print(longest_matching)
     # TODO: Check database for matching profiles
