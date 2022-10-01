@@ -22,6 +22,8 @@ def main():
         for key in keys:
             if key != "name":
                 longest_match.append(longest_match(sequence, key))
+        break
+    print(longest_match)
     # TODO: Check database for matching profiles
 
     return
