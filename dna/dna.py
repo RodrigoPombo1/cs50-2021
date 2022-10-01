@@ -34,6 +34,8 @@ def main():
             longest_matching.append(longest_match(sequence1[0], key))
 
     # TODO: Check database for matching profiles
+    filename = sys.argv[1]
+    f = open(filename)
     data = csv.DictReader(f)
     # it's necessary to open it again because it has already gone through it once and that uses it up
     # I could have also stored the values into a list in the first time and use the list now
