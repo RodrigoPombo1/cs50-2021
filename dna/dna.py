@@ -25,12 +25,11 @@ def main():
             longest_matching.append(longest_match(sequence1[0], key))
     print(longest_matching)
     # TODO: Check database for matching profiles
-    counter = 0
     for person in data:
         matches = 0
         for key in keys:
             if key != "name":
-                if person[key] == longest_matching[0]:
+                if person[key] == longest_matching[counter]:
                     matches += 1
                 counter += 1
         if matches == len(keys) - 1:
