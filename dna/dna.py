@@ -22,6 +22,7 @@ def main():
         print("o programa correu")
         if key != "name":
             for sequence1 in sequence:
+                print(sequence1)
                 print(longest_match(sequence1, key))
                 longest_matching.append(longest_match(sequence1, key))
     print(longest_matching)
