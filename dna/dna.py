@@ -17,13 +17,10 @@ def main():
     sequence = csv.DictReader(f)
     # TODO: Find longest match of each STR in DNA sequence
     longest_matching = []
-    for row in data:
-        keys = row.keys()
-        for key in keys:
-            for sequence1 in sequence:
-                if key != "name":
-                    longest_matching.append(longest_match(sequence1, key))
-        break
+    keys = row.keys()
+    for key in keys:
+        if key != "name":
+            longest_matching.append(longest_match(sequence[0], key))
     print(longest_matching)
     # TODO: Check database for matching profiles
 
