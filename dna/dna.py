@@ -14,13 +14,9 @@ def main():
     # TODO: Read DNA sequence file into a variable
     filename = sys.argv[2]
     f = open(filename)
+    print(csv.DictReader(f))
     sequence = csv.DictReader(f)
     # TODO: Find longest match of each STR in DNA sequence
-    print(type(sequence))
-    amogus{
-        "sus" = 123
-    }
-    print(type(amogus))
     for name in sequence:
         print(name)
     # TODO: Check database for matching profiles
