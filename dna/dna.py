@@ -11,13 +11,18 @@ def main():
     filename = sys.argv[1]
     f = open(filename)
     data = csv.DictReader(f)
+    keys = data.fieldnames
+    # convert the number of times the DNA appears to an int
+    for person in data:
+        for key in keys:
+            if key != "name":
+                person[key] = int(person[key])
     # TODO: Read DNA sequence file into a variable
     filename = sys.argv[2]
     f = open(filename)
     sequence = csv.reader(f)
     # TODO: Find longest match of each STR in DNA sequence
     longest_matching = []
-    keys = data.fieldnames
     for key in keys:
         if key != "name":
             for sequence1 in sequence: #it's only one sequence
