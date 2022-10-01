@@ -26,6 +26,7 @@ def main():
     print(longest_matching)
     # TODO: Check database for matching profiles
     for person in data:
+        counter = 0
         matches = 0
         for key in keys:
             if key != "name":
