@@ -44,11 +44,14 @@ def main():
         matches = 0
         for key in keys:
             if key != "name":
+                person[key] = int(person[key])
+                # it's necessary to convert the string to a an int just like we did the first time
                 if person[key] == longest_matching[counter]:
                     matches += 1
                 counter += 1
         if matches == len(keys) - 1:
             print(person["name"])
+            return
     print("No match")
     return
 
