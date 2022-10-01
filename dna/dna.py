@@ -20,9 +20,8 @@ def main():
     keys = data.fieldnames
     for key in keys:
         if key != "name":
-            for sequence1 in sequence:
-                print(sequence1)
-                longest_matching.append(longest_match(sequence1, key))
+            print(sequence)
+            longest_matching.append(longest_match(sequence, key))
     print(longest_matching)
     # TODO: Check database for matching profiles
 
