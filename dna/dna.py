@@ -20,10 +20,11 @@ def main():
     for row in data:
         keys = row.keys()
         for key in keys:
-            if key != "name":
-                longest_matching.append(longest_match(sequence, key))
+            for sequence1 in sequence:
+                if key != "name":
+                    longest_matching.append(longest_match(sequence1, key))
         break
-    print(longest_match)
+    print(longest_matching)
     # TODO: Check database for matching profiles
 
     return
