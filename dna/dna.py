@@ -30,11 +30,13 @@ def main():
     for key in keys:
         if key != "name":
             for sequence1 in sequence: #it's only one sequence
-                print("fez isto")
                 continue
             longest_matching.append(longest_match(sequence1[0], key))
 
     # TODO: Check database for matching profiles
+    data = csv.DictReader(f)
+    # it's necessary to open it again because it has already gone through it once and that uses it up
+    # I could have also stored the values into a list in the first time and use the list now
     for person in data:
         counter = 0
         matches = 0
