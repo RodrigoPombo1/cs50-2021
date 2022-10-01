@@ -30,6 +30,7 @@ def main():
     for key in keys:
         if key != "name":
             for sequence1 in sequence: #it's only one sequence
+                print("fez isto")
                 continue
             longest_matching.append(longest_match(sequence1[0], key))
 
