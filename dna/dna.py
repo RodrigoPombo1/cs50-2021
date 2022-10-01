@@ -23,7 +23,7 @@ def main():
     longest_matching = []
     for key in keys:
         if key != "name":
-            for sequence1 in sequence: #it's only one sequence
+            for sequence1 in sequence:  # it's only one sequence
                 continue
             longest_matching.append(longest_match(sequence1[0], key))
 
