@@ -1,1 +1,1 @@
-SELECT COUNTER(title) FROM movies WHERE 
+SELECT COUNTER(title) FROM movies WHERE 10.0 = (SELECT ratings FROM ratings WHERE movie_id = (SELECT id FROM movies));
