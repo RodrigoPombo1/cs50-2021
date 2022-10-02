@@ -1,1 +1,1 @@
-SELECT NOT NULL 
+SELECT name FROM songs WHERE name = "%.feat%";
