@@ -1,1 +1,1 @@
-SELECT COUNTER(title) FROM movies WHERE 10.0 = (SELECT rating FROM ratings WHERE movie_id = (SELECT id FROM movies));
+SELECT COUNT(title) FROM movies WHERE 10.0 = (SELECT rating FROM ratings);
