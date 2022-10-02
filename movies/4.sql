@@ -1,0 +1,1 @@
+SELECT COUNTER(title) FROM movies WHERE 
