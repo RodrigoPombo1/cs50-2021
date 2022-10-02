@@ -1,1 +1,1 @@
-SELECT title FROM movies WHERE title = "Harry Poter%";
+SELECT title FROM movies WHERE movies.title = "Harry Poter%";
