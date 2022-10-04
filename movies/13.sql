@@ -1,0 +1,1 @@
+SELECT name FROM people JOIN stars IN stars.person_id = people.id JOIN movies IN stars.movie_id = movies.id WHERE title IN (SELECT title FROM movies JOIN stars IN stars.movie_id = movies.id JOIN people IN stars.person_id = people.id WHERE p)
