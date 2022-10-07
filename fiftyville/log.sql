@@ -8,6 +8,10 @@ SELECT name, transcript FROM interviews WHERE year = 2021 AND month = 7 AND day 
 --first interview clue
 SELECT license_plate FROM bakery_security_logs WHERE year = 2021 AND month = 7 AND day = 28;
 --second interview clue
-SELECT 
+SELECT account_number
 --third interview clue
 SELECT caller, receiver FROM phone_calls WHERE year = 2021 AND month = 7 AND day = 28 AND duration < 60;
+--get the name of all the people who have done these actions
+
+
+--match them to see if there is someone who has done all of them (it should be our thief)
