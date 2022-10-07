@@ -11,6 +11,8 @@ SELECT license_plate FROM bakery_security_logs WHERE year = 2021 AND month = 7 A
 SELECT account_number FROM atm_transactions WHERE year = 2021 AND month = 7 AND day = 28 AND transaction_type = "withdraw" AND atm_location = "Leggett Street";
 --third interview clue
 SELECT caller, receiver FROM phone_calls WHERE year = 2021 AND month = 7 AND day = 28 AND duration < 60;
+
+
 --get the name of all the people who have done these actions
 
 
