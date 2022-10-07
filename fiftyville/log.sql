@@ -15,6 +15,6 @@ SELECT caller, receiver FROM phone_calls WHERE year = 2021 AND month = 7 AND day
 
 --get the name of all the people who have done these actions
 SELECT name FROM people WHERE license_plate IN (SELECT license_plate FROM bakery_security_logs WHERE year = 2021 AND month = 7 AND day = 28);
-
+SELECT name FROM people WHERE people.id IN (SELECT account_number FROM atm_transactions WHERE year = 2021 AND month = 7 AND day = 28 AND transaction_type = "withdraw" AND atm_location = "Leggett Street";)
 
 --match them to see if there is someone who has done all of them (it should be our thief)
